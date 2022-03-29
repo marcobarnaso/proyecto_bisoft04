@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/app.css">
+    <title>Registration</title>
+</head>
+
+<body>
+
+    <div class="registration">
+        <section class="formulario-de-registro">
+            <form action="http://www.google.com/">
+                <h1>Registro de Nuevo Usuario</h1>
+                <div class="nombre-completo">
+                    <div class="label-container">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="text-input" type="text" name="nombre" id="nombre" placeholder="Comience aquí"
+                            minlength="2" maxlength="46" required>
+                    </div>
+                </div>
+                <div class="nombre-completo">
+                    <div class="label-container">
+                        <label for="primer-apellido">Primer Apellido</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="text-input" type="text" name="primer-apellido" id="primer-apellido" minlength="2"
+                            maxlength="50" required>
+                    </div>
+                </div>
+                <div class="nombre-completo">
+                    <div class="label-container">
+                        <label for="segundo-apellido">Segundo Apellido</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="text-input" type="text" name="segundo-apellido" id="segundo-apellido"
+                            minlength="3" maxlength="50" required>
+                    </div>
+                </div>
+                <div class="label-container">
+                    <label for="email">Correo electrónico</label>
+                </div>
+                <div class="input-container">
+                    <input type="email" name="email" id="email" placeholder="persona@dominio.com" minlength="3"
+                        maxlength="62" required>
+                </div>
+                <div class="container-contrasena">
+
+
+
+                    <div class="input-container">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="contrasena" id="contrasena" minlength="8" max="50" required>
+                    </div>
+
+
+
+                    <div class="input-container">
+                        <label for="confirmar-contrasena">Confirmar contraseña</label>
+                        <input type="password" name="confirmar-contrasena" id="confirmar-contrasena" minlength="8"
+                            max="50" required>
+                    </div>
+                </div>
+                <div class="label-container">
+                    <label for="tipo-id">Tipo de Identificacion</label>
+                </div>
+                <div class="input-container">
+                    <select name="tipo-id" id="tipo-id">
+                        <option class="slt-id-title" value="">
+                            Seleccione
+                        </option>
+                    </select>
+                </div>
+                <div class="label-container">
+                    <label for="identificacion">
+                        Identificación
+                    </label>
+                </div>
+                <div class="input-container">
+                    <input type="number" id="identificacion" name="identificacion" placeholder="1234556789" required>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="provincia">Provincia</label>
+                    </div>
+                    <div class="input-container">
+                        <select name="provincia" id="provincia" required>
+                            <option class="slt-provincia-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="canton">Cantón</label>
+                    </div>
+                    <div class="input-container">
+                        <select name="canton" id="canton" disabled required>
+                            <option class="slt-canton-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="distrito">Distrito</label>
+                    </div>
+                    <div class="input-container">
+                        <select name="distrito" id="distrito" disabled required>
+                            <option class="slt-distrito-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="label-container">
+                    <label for="direccion-exacta">Dirección Exacta</label>
+                </div>
+                <div class="input-container">
+                    <textarea name="direccion-exacta" id="direccion-exacta" cols="50" rows="5"
+                        placeholder="Escriba su dirección aquí"></textarea>
+                </div>
+                <div class="metodo-de-pago">
+                    <div>
+                        <label for="nombre-tarjeta">Nombre en la tarjeta</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="nombre-tarjeta" id="nombre-tarjeta" maxlength="150" required>
+                    </div>
+                </div>
+                <div id="metodo-de-pago-tarjeta" class="metodo-de-pago">
+                    <div class="label-container">
+                        <label for="tarjeta">Tarjeta</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="text-input" type="number" name="tarjeta" id="tarjeta" minlength="16"
+                            maxlength="16" required>
+                    </div>
+                </div>
+                <div class="metodo-de-pago">
+                    <div class="label-container">
+                        <label for="fecha-expiracion">Fecha de Expiración</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="date" name="" id="fecha-expiracion" required>
+                    </div>
+                </div>
+                <div class="metodo-de-pago">
+                    <div class="label-container">
+                        <label for="cvv">CVV</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="cvv" id="cvv" min="0" max="9999" required>
+                    </div>
+                </div>
+                <div>
+                    <button>Registrarse</button>
+                    <button type="button" onclick="window.location='/pages/landing.html'">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/resources/js/servicio_general.js"></script>
+    <script src="/resources/js/app.js"></script>
+</body>
+
+</html>
