@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/landing.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Landing</title>
 </head>
 
@@ -22,54 +23,179 @@
     </section>
 
     <section id="navigation">
-        <nav class="menu">
-            <ul>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Búsqueda</a></li>
-                <li><a href="#">Acerca de nosotros</a></li>
-                <li><a href="/pages/login.html">Perfil</a></li>
-            </ul>
-        </nav>
-    </section>
-    <section id="hero-banner">
-        <img src="/resources/img/2108.w023.n001.894B.p1.894.jpg" alt="hero-banner">
-    </section>
-    <section id="mas-vendidos">
-        <button type="button" class="previous" value="left">Prev</button>
-        <div class="container-mas-vendidos">
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
-            </div>
-            <div class="book-container">
-                <img src="/resources/img/promisedLand.jpg" alt="promised-land">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Catálogo</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
             </div>
         </div>
-        <button type="button" class="next" value="right">Next</button>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Busqueda</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Acerca de nosotros</button>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Perfil</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Ingresar</a>
+                <a href="#" class="link">Crear cuenta</a>
+            </div>
+        </div>
     </section>
-    <section id="promociones">
-        promociones y descuentos
+    <section id="hero-banner" class="gallery js-flickity" data-flickity-options='{ "autoPlay": true }'>
+        <div class="gallery-cell"><img src="/resources/img/hero_banner_1.jpeg" alt="hero-banner"></div>
+        <div class="gallery-cell"><img src="/resources/img/hero_banner_2.jpeg" alt="hero-banner"></div>
+        <div class="gallery-cell"><img src="/resources/img/hero_banner_3.jpeg" alt="hero-banner"></div>
+        <div class="gallery-cell"><img src="/resources/img/hero_banner_4.jpeg" alt="hero-banner"></div>
     </section>
-    <section id="reviews">
-        reviews
+    <section id="sct-mas-vendidos">
+        <p align="center">Más vendidos</p>
+        <div class="top-diez-vendidos">
+            <button type="button" class="previous" value="left">◀</button>
+            <div class="container-horizontal-scroll">
+                <div class="book-container">
+                    <img src="/resources/img/promisedLand.jpg" alt="promised-land">
+                </div>
+                <div class="book-container">
+                    <div class="book-image">
+                        <img src="/resources/img/dr_seuss.jpg" alt="dr_seuss.jpg">
+                    </div>
+                    <div class="book-image-modal">
+                        Agregar
+                    </div>
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_woman_on_fire.jpeg" alt="woman-on-fire">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_waypoints.jpeg" alt="waypoints">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_watching_god.jpeg" alt="watching-god">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_wolf_den.jpeg" alt="the-wolf-den">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_first_to_die.jpeg" alt="the-first-to-die">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_family_plot.jpeg" alt="the-family-plot">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_diamond_eye.jpeg" alt="the-diamond-eye">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_city_we_became.jpeg" alt="the-city-we-became">
+                </div>
+            </div>
+            <button type="button" class="next" value="right">▶</button>
+        </div>
+    </section>
+    <section id="sct-promociones">
+        <p align="center">Promociones</p>
+        <div class="diez-promociones">
+            <button type="button" class="previous1" value="left">◀</button>
+            <div class="container-horizontal-scroll1">
+                <div class="book-container">
+                    <img src="/resources/img/libro_start_again_monday.jpeg" alt="start-again-monday">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_shrines_of_gaiety.jpeg" alt="shrines-of-gaiety">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_my_dearest_darkest.jpeg" alt="my-dearest-darkest">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_museum_of_wonders.jpeg" alt="museum-of-wonders">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_magic_stepped_in_poison.jpeg" alt="magic-stepped-in-poison">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_leave_the_world_behind.jpeg" alt="leave_the_world_behind">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_hell_bent_leigh.jpeg" alt="hell-bent-leigh">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_go_to_dinners.jpeg" alt="go-to-dinners">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_drunk.jpeg" alt="drunk">
+                </div>
+                <div class="book-container">
+                    <img src="/resources/img/libro_by_the_sea.jpeg" alt="by-the-sea">
+                </div>
+            </div>
+            <button type="button" class="next1" value="right">▶</button>
+        </div>
+
+        <div class="promociones-anuncios">
+            <div class="promociones-anuncio">
+                <img src="/resources/img/anuncio_1.jpeg" alt="anuncio_1">
+                <span>Mystery</span>
+            </div>
+            <div class="promociones-anuncio">
+                <img src="/resources/img/anuncio_2.jpeg" alt="anuncio_2">
+                <span>Science</span>
+            </div>
+            <div class="promociones-anuncio">
+                <img src="/resources/img/anuncio_3.jpeg" alt="anuncio_3">
+                <span>Thriller</span>
+            </div>
+        </div>
+    </section>
+    <section id="sct-reviews">
+        <p align="center">Reseñas</p>
+        <div>
+            <div class="review-container">
+                <div class="book-container">
+                    <img src="/resources/img/libro_by_the_sea.jpeg" alt="by-the-sea">
+                </div>
+                <div class="review-quote">
+                    <p>"El mejor libro que he leido en mi vida, no pude parar hasta que lo terminé."</p>
+                </div>
+            </div>
+            <div class="review-container">
+                <div class="book-container">
+                    <img src="/resources/img/libro_all_the_devils_are_here.jpeg" alt="all-the-devils-are-here">
+                </div>
+                <div class="review-quote">
+                    <p>"Me tomó por sorpresa cuando a mitad de la historia me pusieron el mundo al revés, nunca lo
+                        imaginé, súper recomendado."</p>
+                </div>
+            </div>
+            <div class="review-container">
+                <div class="book-container">
+                    <img src="/resources/img/libro_magic_stepped_in_poison.jpeg" alt="magic-stepped-in-poison">
+                </div>
+                <div class="review-quote">
+                    <p>"Pretencioso, es la palabra que puedo usar para describirlo, no respeta la inteligencia del
+                        lector y sus "twists" se ven venir desde el horizonte."</p>
+                </div>
+            </div>
+            <div class="review-container">
+                <div class="book-container">
+                    <img src="/resources/img/libro_the_diamond_eye.jpeg" alt="the-diamond-eye">
+                </div>
+                <div class="review-quote">
+                    <p>"Lo comencé sin ganas, la historia tarda un poco en carburar, pero una vez que lo hace, es un
+                        tren imparable, vale la pena invertir el tiempo en esas primeras decenas de páginas."</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         footer
     </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/resources/js/landing.js"></script>
 </body>
 
