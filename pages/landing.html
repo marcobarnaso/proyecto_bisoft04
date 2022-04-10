@@ -8,46 +8,15 @@
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/landing.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
     <title>Landing</title>
 </head>
 
 <body>
-    <section id="head">
-        <div class="logo">
-            Logo
-        </div>
-        <div class="container-busqueda">
-            <label for="busqueda">Búsqueda</label>
-            <input type="text" name="busqueda" id="busqueda">
-        </div>
-    </section>
-
-    <section id="navigation">
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Catálogo</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Busqueda</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Acerca de nosotros</button>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Perfil</button>
-            <div class="dropdown-menu">
-                <a href="/pages/login.html" class="link">Ingresar</a>
-                <a href="/pages/registration.html" class="link">Crear cuenta</a>
-            </div>
-        </div>
-    </section>
+    <section id="head"></section>
+    <section id="navigation"></section>
+    
     <section id="hero-banner" class="gallery js-flickity" data-flickity-options='{ "autoPlay": true }'>
         <div class="gallery-cell"><img src="/resources/img/hero_banner_1.jpeg" alt="hero-banner"></div>
         <div class="gallery-cell"><img src="/resources/img/hero_banner_2.jpeg" alt="hero-banner"></div>
@@ -188,18 +157,20 @@
         </div>
     </section>
     <footer>
-        <div class="footer-icon-container">
+        <!-- <div class="footer-icon-container">
             <div class="footer-icon"><img src="/resources/img/facebook_icon.png" alt="facebook"></div>
             <div class="footer-icon"><img src="/resources/img/twitter.png" alt="twitter"></div>
             <div class="footer-icon"><img src="/resources/img/linked_in_icon.png" alt="linkedIn"></div>
         </div>
         <div>
             <p>Derechos reservados, Librería Lovelace, 2022.</p> 
-        </div>
+        </div> -->
     </footer>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/resources/js/landing.js"></script>
     <script src="/resources/js/libros.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
 </body>
 
 </html>

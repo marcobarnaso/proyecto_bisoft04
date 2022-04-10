@@ -1,6 +1,9 @@
 body {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-container {
     display: flex;
     height: 100vh;
     flex-direction: row;

@@ -1,62 +1,64 @@
 const botonregistrar = document.getElementById('btn-registrar');
-const inputIsbn = document.getElementById('txt-Isbn');
-const inputTitulo = document.getElementById('txt-titulo');
-const inputAutor = document.getElementById('txt-Autor');
-const inputEditorial = document.getElementById('txt-Editorial');
-const inputFecha = document.getElementById('txt-Anno');
-const inputPremio = document.getElementById('txt-Premio');
-const inputResenna = document.getElementById('txt-Resenna');
-const inputPrecio = document.getElementById('txt-Precio');
-const inputDescuento = document.getElementById('txt-Descuento');
+const inputPais = document.getElementById('slt-pais');
+const inputfoto = document.getElementById('txt-foto');
+const inputnombre = document.getElementById('txt-nombre');
+const inputfechaN = document.getElementById('txt-Fecha');
+const inputfechaD = document.getElementById('txt-fechaDef');
+const inputlibros = document.getElementById('txt-Libros');
+const inputPremioNo = document.getElementById('txt-nobel');
+const inputPremiNoAnno = document.getElementById('txt-nobelanno');
+const inputResennaV = document.getElementById('txt-resenna');
+const inputPremiosL = document.getElementById('slt-premiosL');
+
 
 const validar = () => {
     let hayError = false;
 
-    if (inputIsbn.value == '') {
+    if (inputPais.value == '') {
         hayError = true;
     } else {
 
     }
-    if (inputTitulo.value == '') {
+    if (inputnombre.value == '') {
         hayError = true;
     } else {
 
     }
-    if (inputAutor.value == '') {
+    if (inputfechaN.value == '') {
         hayError = true;
     } else {
 
     }
-    if (inputEditorial.value == '') {
-        hayError = true;
-    } else {
-
-    }
-
-    if (inputFecha.value == '') {
-        hayError = true;
-    } else {
-
-    }
-    if (inputPremio.value == '') {
+    if (inputfechaD.value == '') {
         hayError = true;
     } else {
 
     }
 
-    if (inputResenna.value == '') {
+    if (inputlibros.value == '') {
+        hayError = true;
+    } else {
+
+    }
+    if (inputPremioNo.value == '') {
         hayError = true;
     } else {
 
     }
 
-    if (inputPrecio.value.value == '') {
+    if (inputPremiNoAnno.value == '') {
         hayError = true;
     } else {
 
     }
 
-    if (inputDescuento.value.value == '') {
+    if (inputResennaV.value.value == '') {
+        hayError = true;
+    } else {
+
+    }
+
+    if (inputPremiosL.value.value == '') {
         hayError = true;
     } else {
 

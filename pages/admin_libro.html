@@ -82,7 +82,7 @@
             </div>
             <div class="input-container">
                 <label for="txt-Anno">Fecha de publicación</label>
-                <input type="text" id="txt-Anno">
+                <input type="text" id="txt-Anno" placeholder="DD-MM-AAAA">
             </div>
             <div class="input-container">
                 <label for="txt-Resenna">Reseña del libro</label>
@@ -102,6 +102,22 @@
                 <input type="number" id="txt-Descuento">
             </div>
 
+            <div class="input-container">
+                <label for="txt-Imagen">Imagen</label>
+                <input type="text" id="txt-Imagen">
+            </div>
+
+            <div class="input-container">
+                <label for="slt-genero">Genero</label>
+                <select name="slt-Genero" id="slt-Genero">
+                    <option value=""selected> -- Selecione un genero -- </option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                   
+                </select>
+            </div>
+
+
             <button id="btn-registrar">Registrar</button>
 
         </form>
@@ -118,6 +134,8 @@
                     <th>Reseña</th>
                     <th>Precio</th>
                     <th>Descuento</th>
+                    <th>Imagen</th>
+                    <th>Genero</th>
                     <th></th>
                 </tr>
             </thead>
@@ -143,6 +161,8 @@
             const premio = document.getElementById("txt-Premio").value;
             const precio = document.getElementById("txt-Precio").value;
             const descuento = document.getElementById("txt-Descuento").value;
+            const Imagen = document.getElementById("txt-Imagen").value;
+            const Genero = document.getElementById("slt-Genero").value;
             tbodyEl.innerHTML += `
             <tr>
                 <td>${isbn}</td>
@@ -154,6 +174,8 @@
                 <td>${premio}</td>
                 <td>${precio}</td>
                 <td>${descuento}</td>
+                <td>${Imagen}</td>
+                <td>${Genero}</td>
                 <td><button class="deleteBtn">Borrar</button></td>
             </tr>
         `;
@@ -171,7 +193,9 @@
         formEl.addEventListener("submit", onAddWebsite);
         tableEl.addEventListener("click", onDeleteRow);
     </script>
-
+    <div class="footer">
+        <p>Lovelace</p>
+    </div>
     <script src="/js/admin_libro.js"></script>
     <script src="/js/adminvalidacion.js"></script>
 

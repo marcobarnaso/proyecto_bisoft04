@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#head {
+/* #head {
     display: flex;
     justify-content: space-between;
     background-color: #3E5961;
@@ -79,7 +79,7 @@ body {
     pointer-events: auto;
     font-family: inherit;
     font-size: inherit;
-}
+} */
 
 
 
@@ -176,7 +176,7 @@ body {
     font-family: cursive;
 }
 
-footer {
+/* footer {
     color: white;
     font-weight: bold;
     display: flex;
@@ -186,7 +186,7 @@ footer {
     background-color: #3E5961;
     width: 100%;
     height: 50px;
-}
+} */
 
 .container-busqueda {
     margin: 40px 10px 0px 0px;
@@ -308,7 +308,7 @@ footer {
     cursor: pointer;
 }
 
-.footer-icon-container {
+/* .footer-icon-container {
     margin-left: 15px;
     display: flex;
     flex-direction: row;
@@ -321,7 +321,7 @@ footer {
 
 .footer-icon img{
     width: 50px;
-}
+} */
 
 
 
