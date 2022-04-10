@@ -1,6 +1,5 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(/resources/img/login_bg2.jpg);
 }
 
 .login-container {
@@ -21,7 +20,8 @@ body {
 }
 
 #login form{
-    background-image: url(/resources/img/Wave-100s-343px.png);
+    background-image: url(/resources/img/login-background.png);
+    background-size: cover;
     padding: 190px 10px 60px 10px;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/editar-preferencias-usuario.css">
+    <!--Esto es editable-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Preferencias</title>
+</head>
+
+<body>
+    <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
+    <section id="head">
+        <div class="logo">
+            Lovelace
+        </div>
+        <div class="container-busqueda">
+            <label for="busqueda">Búsqueda</label>
+            <input type="text" name="busqueda" id="busqueda">
+        </div>
+    </section>
+
+    <section id="navigation">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Catálogo</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Busqueda</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Acerca de nosotros</button>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Perfil</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Ingresar</a>
+                <a href="#" class="link">Crear cuenta</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Aqui termina la seccion con el estandar del sitio-->
+
+    <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
+    <section id="sct-contenedores">
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <div class="contenedor">
+            <h2>Preferencias de autores:</h2>
+
+            <div id="preferencias-autor">
+
+            </div>
+            <div id="agregar-preferencia">
+                <form>
+                    <div class="label-container">
+                        <label for="agregar-autor">Agregar autor:</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="agregar-autor" id="agregar-autor" maxlength="150" required>
+                    </div>
+                </form>
+                <button type="submit">Agregar</button>
+            </div>
+
+            <h2>Preferencias de géneros literarios:</h2>
+            <div id="preferencias-genero">
+
+            </div>
+            <div id="agregar-preferencia">
+                <form>
+                    <div class="label-container">
+                        <label for="agregar-genero">Agregar género literario:</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="agregar-genero" id="agregar-genero" maxlength="150" required>
+                    </div>
+                </form>
+                <button type="submit">Agregar</button>
+            </div>
+
+        </div>
+
+
+
+    </section>
+    <div class="botones">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-cancelar">Cancelar</button>
+    </div>
+    <!--Esta seccion contiene el footer estandar del sitio-->
+    <footer>
+        footer
+    </footer>
+
+    <!--Aqui se puede enlazar el codigo con Javascript-->
+    <script src="/resources/js/editar-preferencias-usuario.js"></script>
+</body>
+
+</html>

@@ -26,6 +26,9 @@ botonNext.addEventListener("click", () => {
   let slideRight = event.target.value;
   console.log(slideRight);
   slide(slideRight, container);
+  document.querySelector('.modal').classList.remove('show-modal')
+  document.querySelector('.modal').style.position = "relative"
+  document.querySelector('.show-modal').style.position = "relative"
 });
 
 botonPrevious.addEventListener("click", () => {
@@ -33,6 +36,9 @@ botonPrevious.addEventListener("click", () => {
   let slideLeft = event.target.value;
   console.log(slideLeft);
   slide(slideLeft, container);
+  document.querySelector('.modal').classList.remove('show-modal')
+  document.querySelector('.modal').style.position = "relative"
+  document.querySelector('.show-modal').style.position = "relative"
 });
 
 botonNext1.addEventListener("click", () => {
@@ -64,3 +70,22 @@ document.addEventListener("click", (e) => {
     dropdown.classList.remove("active");
   });
 });
+
+function getLibroId() {
+  libroEncontrado = false
+
+  let libro = document.querySelector('.book-container')
+  let libroId = libro.getAttribute('libroId')
+  listaLibros.forEach(libro => {
+    if(libro.id == libroId) {
+      localStorage.setItem('libro', JSON.stringify(libro))
+      libroEncontrado = true
+    }
+    if(libroEncontrado == true) {
+      window.location.href = 'perfil_libro.html'
+    }
+  }) 
+}
+
+
+document.querySelector('.book-container').addEventListener('click', getLibroId)

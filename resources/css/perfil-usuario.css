@@ -1,0 +1,180 @@
+/* Aqui comienza el template del estandar del sitio */
+
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d85205;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation {
+    margin-top: 10px;
+    height: 40px;
+    background-color: #d85205;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: .5rem;
+    gap: 1rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #c23616;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    background-color: #d85205;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.link {
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown.active>.link+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.container-busqueda {
+    margin: 40px 10px 0px 0px;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: #d85205;
+    border: 1px solid white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-busqueda {
+    margin: 40px 10px 0px 0px;
+}
+
+
+/* Aqui termina el template del estandar del sitio*/
+
+#sct-contenedores {
+    display: flex;
+    padding: 5%;
+    padding-bottom: 1%;
+}
+
+.contenedor {
+    border: 1px solid black;
+    width: 300px;
+    height: 400px;
+    padding: 1%;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.contenedor h2 {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: bold;
+}
+
+.contenedor p {
+    text-align: center;
+}
+
+.contenedor button {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    width: 290px;
+    height: 100px;
+}
+
+body button:hover {
+    background-color: #d85205;
+    color: white;
+    cursor: pointer;
+}
+
+#btn-informacion {
+    margin-top: 35%;
+}
+
+#btn-preferencias {
+    margin-top: 35%;
+}
+
+#btn-pagos {
+    margin-top: 30%;
+}
+
+.fuera {
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+
+.fuera #foto-perfil {
+    width: 150px;
+    box-sizing: border-box;
+}
+
+#btn-historial {
+    font-weight: bold;
+    height: 60px;
+    width: 1005px;
+    border: 1px solid black;
+}
+
+.historial {
+    padding-left: 5%;
+    padding-left: 260px;
+}

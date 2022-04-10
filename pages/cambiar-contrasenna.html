@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/cambiar-contrasenna.css">
+    <!--Esto es editable-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Cambiar contraseña</title>
+</head>
+
+<body>
+    <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
+    <section id="head">
+        <div class="logo">
+            Lovelace
+        </div>
+        <div class="container-busqueda">
+            <label for="busqueda">Búsqueda</label>
+            <input type="text" name="busqueda" id="busqueda">
+        </div>
+    </section>
+
+    <section id="navigation">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Catálogo</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Busqueda</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Acerca de nosotros</button>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Perfil</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Ingresar</a>
+                <a href="#" class="link">Crear cuenta</a>
+            </div>
+        </div>
+    </section>
+
+    <!--Aqui termina la seccion con el estandar del sitio-->
+
+    <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
+    <section id="sct-contenedores">
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <div class="contenedor">
+            <h2>Cambio de contraseña</h2>
+
+
+
+            <label for="actual-contrasena" class="label-container">Contraseña actual:</label>
+            <div class="input-container">
+                <input type="password" name="actual-contrasena" id="actual-contrasena" minlength="8" max="50" required>
+            </div>
+
+            <label for="nueva-contrasena" class="label-container">Nueva contraseña:</label>
+            <div class="input-container">
+                <input type="password" name="nueva-contrasena" id="nueva-contrasena" minlength="8" max="50" required>
+            </div>
+
+
+            <label for="confirmar-contrasena" class="label-container">Confirmar nueva contraseña:</label>
+            <div class="input-container">
+                <input type="password" name="confirmar-contrasena" id="confirmar-contrasena" minlength="8" max="50" required>
+            </div>
+
+
+        </div>
+
+    </section>
+    <div class="botones">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-cancelar">Cancelar</button>
+    </div>
+    <!--Esta seccion contiene el footer estandar del sitio-->
+    <footer>
+        footer
+    </footer>
+
+    <!--Aqui se puede enlazar el codigo con Javascript-->
+    <script src="/resources/js/cambiar-contrasenna.js"></script>
+</body>
+
+</html>

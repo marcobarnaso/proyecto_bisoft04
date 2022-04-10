@@ -132,22 +132,25 @@ body {
     margin: 0px 25px 0px 25px;
     white-space: nowrap;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .book-container img {
-    width: 160px;
+    width: fit-content;
     height: 255px;
 }
 
 #sct-promociones {
-    margin-top: 40px;
-
+    border-top: 1px dotted lightgrey;
+    margin-top: 60px;
 }
 
 #sct-reviews{
-    margin-top: 10px;
+    border-top: 1px solid lightgrey;
+    margin-top: 60px;
     display: block;
 }
 
@@ -165,7 +168,7 @@ body {
 #sct-reviews > p{
     padding-right: 65rem;
     font-size: 2.5rem;
-    margin-bottom: 25px;
+    margin: 25px 0 25px 0;
 }
 
 .review-quote p{
@@ -174,13 +177,15 @@ body {
 }
 
 footer {
-    margin-top: 10px;
-    border: 1px solid red;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30se le puedepx;
+    background-color: #3E5961;
     width: 100%;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container-busqueda {
@@ -191,7 +196,7 @@ footer {
 #sct-promociones p {
     padding-right: 65rem;
     font-size: 36px;
-    margin-bottom: 20px;
+    margin: 20px 0 25px 0;
 }
 
 .diez-promociones {
@@ -217,10 +222,12 @@ footer {
     display: block;
     height: 353px;
     width: 466px;
+    cursor: pointer;
 }
 
 .promociones-anuncio span {
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 #sct-mas-vendidos p {
@@ -294,25 +301,27 @@ footer {
 }
 
 
-.book-image:hover {
-    z-index: 0;
-    position: absolute;
+.book-image {
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
-.book-image-modal{
-    z-index: 1;
-    height: 255px;
-    width: 160px;
-    transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(0, 0, 0, 0);
-
+.footer-icon-container {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: row;
 }
 
-.book-image-modal:hover{
-    z-index: 1;
-    background-color: rgba(0, 0, 0, .5);
-    color: white;
-    bottom: 10px;
+.footer-icon {
+    display: flex;
+    cursor: pointer;
 }
+
+.footer-icon img{
+    width: 50px;
+}
+
+
 

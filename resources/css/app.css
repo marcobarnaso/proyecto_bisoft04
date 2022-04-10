@@ -1,6 +1,5 @@
 body {
     box-sizing: border-box;
-    background-image: url(/resources/img/login_bg2.jpg);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     height: 100vh;
@@ -31,7 +30,8 @@ h1 {
 
 .formulario-de-registro {
     color: black;
-    background-image: url(/resources/img/form.png);
+    background-image: url(/resources/img/background-registration.png);
+    background-size: cover;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);

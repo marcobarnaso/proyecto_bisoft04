@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/administrador.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="sct-contenedores">
+        <h1>Administrador</h1>
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <div class="contenedor">
+            <h2>Información de la cuenta</h2>
+            <div class="contenido">
+                <section id="linea1">
+                    <form id="content">
+                        <!--Aqui se contiene la primera seccion de la informacion editable-->
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="nombre" id="nombre" placeholder="Nombre"
+                                    minlength="2" maxlength="46" required value="Marco">
+                            </div>
+                        </div>
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="primer-apellido">Primer Apellido</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="primer-apellido" id="primer-apellido"
+                                    placeholder="Primer apellido" minlength="2" maxlength="50" required value="Ramírez">
+                            </div>
+                        </div>
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="segundo-apellido">Segundo Apellido</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="segundo-apellido" id="segundo-apellido"
+                                    placeholder="Segundo apellido" minlength="3" maxlength="50" required value="Durán">
+                            </div>
+                        </div>
+                        <div class="label-container">
+                            <label for="tipo-id-perfil">Tipo de Identificacion</label>
+                        </div>
+                        <div class="input-container">
+                            <select name="tipo-id" id="tipo-id-perfil">
+                                <option class="slt-id-title" value="">
+                                    Cédula de identidad
+                                </option>
+                            </select>
+                        </div>
+                        <div class="label-container">
+                            <label for="identificacion">
+                                Identificación
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <input type="number" id="identificacion-perfil" name="identificacion"
+                                placeholder="0-0000-0000" value="504270962">
+
+                            <div class="label-container">
+                                <label for="genero">Género</label>
+                            </div>
+                            <div class="input-container">
+                                <select name="" id="genero">
+                                    <option class="slt-id-title" value="">
+                                        Masculino
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Aqui se contiene la segunda seccion de la informacion editable-->
+                    </form>
+                </section>
+                <section id="linea2">
+                    <form>
+                        <div id="selectores">
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="provincia">Provincia</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="provincia" id="provincia-perfil" required>
+                                        <option class="slt-provincia-title" value="">Alajuela</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="canton">Cantón</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="canton" id="canton-perfil" required>
+                                        <option class="slt-canton-title" value="">Alajuela</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="distrito">Distrito</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="distrito" id="distrito-perfil" required>
+                                        <option class="slt-distrito-title" value="">San José</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="label-container">
+                            <label for="direccion-exacta">Dirección Exacta</label>
+                        </div>
+                        <div class="input-container">
+                            <textarea name="direccion-exacta" id="direccion-exacta" cols="50" rows="5"
+                                placeholder="100 metros norte del River Gym, Urbanización Doña Bertilia"></textarea>
+
+                            <div id="datos">
+                                <div id="Correo">
+                                    <div class="label-container">
+                                        <label for="email">Correo electrónico</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="email" name="email" id="email" placeholder="persona@dominio.com"
+                                            minlength="3" maxlength="62" required value="marco@gmail.com" disabled>
+                                    </div>
+                                    <div>
+                                        <label for="btn-contrasenna"></label>
+                                    </div>
+                                </div>
+                                <div class="btn-guardar-cancelar">
+                                    <button id="btn-guardar">Guardar</button>
+                                    <button id="btn-cancelar">Cancelar</button>
+                                </div>
+                                <div id="contrasenna">
+                                    <label for="btn-contrasenna">Contraseña</label>
+                                    <div>
+                                        <button id="btn-contrasenna">Cambiar contraseña</button>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </section>
+                <section id="administracion-catalogos">
+                    <div class="administrar-container">
+                        <img src="/resources/img/promisedLand.jpg" alt="">
+                        Administrar Libros
+                    </div>
+                    <div class="administrar-container">
+                        <img src="/resources/img/autorObama.jpg" alt="">
+                        <p>Administrar Autores</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <div id="main-container">
+        <section id="generos-literarios">
+            <label for="genero-literario-input">Géneros literarios</label>
+            <div>
+                <input id="genero-literario-input" class="genero-literario-input" type="text">
+                <button type="submit" class="agregar-genero-literario">Agregar</button>
+                <button type="submit" class="remover-genero-literario">Remover</button>
+            </div>
+            <div class="container-genero-literario">
+
+            </div>
+        </section>
+        <section class="formulario-de-registro">
+            <form id="registro-socio-comercial" action="">
+                <h2>Registro de Nuevo Socio Comercial</h2>
+                <div class="nombre-completo">
+                    <div class="label-container">
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-container">
+                        <input class="socio-input" type="text" name="nombre" id="nombre" placeholder="Comience aquí"
+                            minlength="2" maxlength="46" required>
+                    </div>
+                </div>
+                <div class="label-container">
+                    <label for="email">Correo electrónico</label>
+                </div>
+                <div class="input-container">
+                    <input class="socio-input" type="email" name="email" id="email" placeholder="persona@dominio.com"
+                        minlength="3" maxlength="62" required>
+                </div>
+                <div class="label-container">
+                    <label for="telefono">Teléfono</label>
+                </div>
+                <div class="input-container">
+                    <input class="socio-input" type="telefono" name="telefono" id="telefono"
+                        placeholder="Número de teléfono" minlength="8" maxlength="8" required>
+                </div>
+                <div class="label-container">
+                    <label for="tipo-id">Tipo de Identificacion</label>
+                </div>
+                <div class="input-container">
+                    <select class="socio-input" name="tipo-id" id="tipo-id">
+                        <option class="slt-id-title" value="">
+                            Seleccione
+                        </option>
+                    </select>
+                </div>
+                <div class="label-container">
+                    <label for="identificacion">
+                        Identificación
+                    </label>
+                </div>
+                <div class="input-container">
+                    <input class="socio-input" type="number" id="identificacion" name="identificacion"
+                        placeholder="1234556789" required>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="provincia">Provincia</label>
+                    </div>
+                    <div class="input-container">
+                        <select class="socio-input" name="provincia" id="provincia" required>
+                            <option class="slt-provincia-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="canton">Cantón</label>
+                    </div>
+                    <div class="input-container">
+                        <select class="socio-input" name="canton" id="canton" disabled required>
+                            <option class="slt-canton-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select-direccion">
+                    <div class="label-container">
+                        <label for="distrito">Distrito</label>
+                    </div>
+                    <div class="input-container">
+                        <select class="socio-input" name="distrito" id="distrito" disabled required>
+                            <option class="slt-distrito-title" value="">Seleccione</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="label-container">
+                    <label for="direccion-exacta">Dirección Exacta</label>
+                </div>
+                <div class="input-container">
+                    <textarea class="socio-input" name="direccion-exacta" id="direccion-exacta" cols="50" rows="5"
+                        placeholder="Escriba su dirección aquí"></textarea>
+                </div>
+                <div>
+                    <button type="button" class="registrar-socio" disabled>Registrar</button>
+                    <button type="button" onclick="window.location='/pages/landing.html'">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section id="busqueda-socios-comerciales">
+            <label for="busqueda-socios">Buscar Socios Comerciales</label>
+            <div>
+                <input id="busqueda-socios" type="text" name="busqueda-socios-comerciales">
+                <button type="button" class="buscar-socio">Buscar</button>
+            </div>
+            <div class="container-busqueda-resultado">
+                <div class="socio-informacion">
+                </div>
+                <div class="socio-mapa">
+                    <div class="mapouter">
+                        <div class="gmap_canvas"><iframe width="300" height="300" id="gmap_canvas"
+                                src="https://maps.google.com/maps?q=walmart_heredia&output=embed" frameborder="0"
+                                scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
+                            <style>
+                                .mapouter {
+                                    position: relative;
+                                    text-align: right;
+                                    height: 300px;
+                                    width: 300px;
+                                }
+                            </style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+                            <style>
+                                .gmap_canvas {
+                                    overflow: hidden;
+                                    background: none !important;
+                                    height: 300px;
+                                    width: 300px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="descuentos">
+                <div class="test">
+                    <label for="descuento-general">Descuento general</label>
+                    <input type="text" id="descuento-general" placeholder="Porcentaje descuento">
+                    <button type="button">Salvar</button>
+                </div>
+                <div>
+                    <label for="descuento-lealtad">Descuento lealtad</label>
+                    <input type="text" id="descuento-lealtad" placeholder="Porcentaje descuento">
+                    <button type="button">Salvar</button>
+                </div>
+
+                <div>
+                    <label for="descuento-libro">Descuento libro Individual</label>
+                    <input type="text" id="descuento-libro" placeholder="Nombre del Libro">
+                </div>
+                <div>
+                    <label for="descuento-porcentaje">Porcentaje de descuento libro individual</label>
+                    <input type="text" name="descuento-porcentaje" id="descuento-porcentaje"
+                        placeholder="Porcentaje descuento">
+                    <button type="button">Salvar</button>
+                </div>
+        </section>
+    </div>
+    <script src="/resources/js/administrador.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/resources/js/socios-comerciales.js"></script>
+</body>
+
+</html>

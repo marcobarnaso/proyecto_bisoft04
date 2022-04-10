@@ -43,8 +43,8 @@
         <div class="dropdown" data-dropdown>
             <button class="link" data-dropdown-button>Perfil</button>
             <div class="dropdown-menu">
-                <a href="#" class="link">Ingresar</a>
-                <a href="#" class="link">Crear cuenta</a>
+                <a href="/pages/login.html" class="link">Ingresar</a>
+                <a href="/pages/registration.html" class="link">Crear cuenta</a>
             </div>
         </div>
     </section>
@@ -59,16 +59,11 @@
         <div class="top-diez-vendidos">
             <button type="button" class="previous" value="left">◀</button>
             <div class="container-horizontal-scroll">
-                <div class="book-container">
+                <div class="book-container" libroId="1">
                     <img src="/resources/img/promisedLand.jpg" alt="promised-land">
                 </div>
                 <div class="book-container">
-                    <div class="book-image">
                         <img src="/resources/img/dr_seuss.jpg" alt="dr_seuss.jpg">
-                    </div>
-                    <div class="book-image-modal">
-                        Agregar
-                    </div>
                 </div>
                 <div class="book-container">
                     <img src="/resources/img/libro_woman_on_fire.jpeg" alt="woman-on-fire">
@@ -187,16 +182,25 @@
                 </div>
                 <div class="review-quote">
                     <p>"Lo comencé sin ganas, la historia tarda un poco en carburar, pero una vez que lo hace, es un
-                        tren imparable, vale la pena invertir el tiempo en esas primeras decenas de páginas."</p>
+                        tren imparable."</p>
                 </div>
             </div>
         </div>
     </section>
     <footer>
-        footer
+        <div class="footer-icon-container">
+            <div class="footer-icon"><img src="/resources/img/facebook_icon.png" alt="facebook"></div>
+            <div class="footer-icon"><img src="/resources/img/twitter.png" alt="twitter"></div>
+            <div class="footer-icon"><img src="/resources/img/linked_in_icon.png" alt="linkedIn"></div>
+        </div>
+        <div>
+            <p>Derechos reservados, Librería Lovelace, 2022.</p> 
+        </div>
     </footer>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="/resources/js/landing.js"></script>
+    <script src="/resources/js/libros.js"></script>
 </body>
 
 </html>
+

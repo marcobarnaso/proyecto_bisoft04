@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/perfil-usuario.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Perfil</title>
+</head>
+
+<body>
+    <!-- <header></header>
+        
+    <nav></nav> -->
+    <section id="head">
+        <div class="logo">
+            Logo
+        </div>
+        <div class="container-busqueda">
+            <label for="busqueda">Búsqueda</label>
+            <input type="text" name="busqueda" id="busqueda">
+        </div>
+    </section>
+
+    <section id="navigation">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Catálogo</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Busqueda</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Libros</a>
+                <a href="#" class="link">Autores</a>
+            </div>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Acerca de nosotros</button>
+        </div>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Perfil</button>
+            <div class="dropdown-menu">
+                <a href="#" class="link">Ingresar</a>
+                <a href="#" class="link">Crear cuenta</a>
+            </div>
+        </div>
+    </section>
+
+    <!--- Esta seccion contiene las cajas con opciones que se le mostraran al usuario en el perfil --->
+    <section id="sct-contenedores">
+
+        <!--- Esta es una seccion fuera de las cajas en la cual se muestra una imagen y el nombre del cliente --->
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <!--- Esta caja posee la opcion de editar perfil --->
+        <div class="contenedor">
+            <h2>Información Personal</h2>
+            <p>Aquí puedes encontrar información relacionada a lo que ingresaste durante tu registro y editar alguna de esa información.</p>
+            <button id="btn-informacion">Editar la información personal</button>
+        </div>
+
+        <!--- Esta caja contiene la opcion de editar las preferencias --->
+        <div class="contenedor">
+            <h2>Preferencias</h2>
+            <p>Aquí puedes encontrar tus preferencias seleccionadas en cuanto a autores y a generos literarios, además de poder editar dicha información.</p>
+            <button id="btn-preferencias">Editar las preferencias</button>
+        </div>
+
+        <!--- Esta caja contiene la opcion de editar los metodos de pago --->
+        <div class="contenedor">
+            <h2>Métodos de pago</h2>
+            <p>Aquí puedes encontrar la información relacionada a tus tarjetas y a nuestro sistema de cliente frecuente, aquí puedes definir tu método de pago favorito y editar la información mencionada</p>
+            <button id="btn-pagos">Editar información de pago</button>
+        </div>
+
+
+    </section>
+
+    <!--- Este boton contiene la opcion de ir al historial de compras --->
+    <div class="historial">
+        <button id="btn-historial">Ver el historial de compras</button>
+    </div>
+
+
+    <footer>
+        footer
+    </footer>
+    <script src="/resources/js/perfil-usuario.js"></script>
+</body>
+
+</html>
