@@ -18,7 +18,7 @@
     <div id="main-container">
     <div class="registration">
         <section class="formulario-de-registro">
-            <form class="registrar-usuario" action="http://www.google.com/">
+            <form class="registrar-usuario">
                 <h1>Registro de Nuevo Usuario</h1>
                 <div class="nombre-completo">
                     <div class="label-container">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn-registro" disabled>Registrarse</button>
+                    <button type="button" class="btn-registro" disabled>Registrarse</button>
                     <button type="button" onclick="window.location='/pages/landing.html'">Cancelar</button>
                 </div>
             </form>
@@ -170,10 +170,12 @@
 </div>
 <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/resources/js/servicio_general.js"></script>
     <script src="/resources/js/app.js"></script>
     <script src="/resources/js/header.js"></script>
     <script src="/resources/js/footer.js"></script>
+    <script src="/resources/js/usuarios.js"></script>
 </body>
 
 </html>

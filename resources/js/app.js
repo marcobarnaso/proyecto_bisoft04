@@ -145,3 +145,14 @@ usuarioForm.forEach((e) => {
     }
   });
 });
+
+btnRegistro.addEventListener('click', ()=>{
+  Swal.fire(
+    "Bienvenido",
+    `${listaUsuarios[0].nombre}`,
+    "success"
+  ).then(()=>{
+    window.location.href = 'landing.html'
+    localStorage.setItem('usuarioConectado', listaUsuarios[0])
+  })
+})

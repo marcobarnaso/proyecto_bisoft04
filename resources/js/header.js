@@ -10,6 +10,9 @@ Logo
 `;
 customNav.innerHTML = `
 <div class="dropdown" data-dropdown>
+<button class="link" data-dropdown-button onclick="window.location='/pages/landing.html'">Home</button>
+</div>
+<div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Catálogo</button>
 <div class="dropdown-menu">
     <a href="#" class="link">Libros</a>
@@ -62,8 +65,6 @@ document.addEventListener("click", (e) => {
 
 let showLoggedIn = document.querySelectorAll('[status="login-only"]')
 let showLoggedOut = document.querySelectorAll('[status="logged-out-only"]')
-
-console.log(showLoggedIn)
 
 if(!localStorage.getItem('usuarioConectado')){
   showLoggedIn.forEach(e=>{

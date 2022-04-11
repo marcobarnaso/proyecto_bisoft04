@@ -62,13 +62,13 @@ h1 {
 }
 
 .formulario-de-registro form button {
-    border: 2px solid purple;
-    background: white;
+    border: 1px solid #D65A40;
+    background: #D65A40;
 	padding: 8px 20px 8px 20px;
-	border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	color: purple;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: white;
     font-weight: bold;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -79,9 +79,19 @@ h1 {
 }
 
 .formulario-de-registro form button:hover {
-    border: 2px solid white;
-    background: purple;
-    color: white;
+    border: 1px solid #D65A40;
+    background: white;
+    color: #D65A40;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
+.formulario-de-registro form button:disabled {
+    border: 1px solid #D65A40;
+    background: white;
+    color: grey;
 	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
 	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
