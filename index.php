@@ -1,5 +1,5 @@
 <?php
 
-include_once("landing.html")
+include_once("/pages/landing.html")
 
 ?>
