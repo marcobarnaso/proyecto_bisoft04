@@ -10,6 +10,9 @@ Logo
 `;
 customNav.innerHTML = `
 <div class="dropdown" data-dropdown>
+<button administrador="admin" class="link" style="display:none" data-dropdown-button onclick="window.location='/pages/administrador.html'">Administrador</button>
+</div>
+<div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button onclick="window.location='/pages/landing.html'">Home</button>
 </div>
 <div class="dropdown" data-dropdown>
@@ -86,3 +89,9 @@ document.querySelector('[logout=call]').addEventListener('click', ()=>{
     localStorage.removeItem('usuarioConectado')
   })
 })
+
+let currentUser = JSON.parse(localStorage.getItem('usuarioConectado'))
+if(!currentUser || currentUser.tipo == 1) {
+  console.log('AQUI!')
+  document.querySelector('[administrador="admin"]').removeAttribute("style")
+} 
