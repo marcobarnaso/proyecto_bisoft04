@@ -104,83 +104,44 @@ footer {
 
 /* Aqui termina el template del estandar del sitio*/
 
+
+/* A partir de aqui le puedes dar estilo al contenido del wireframe que no pertenece al estandar*/
+
+.fuera {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+}
+
+#foto-autor {
+    width: 300px;
+
+}
+
 #sct-contenedores {
     display: flex;
-    padding: 5%;
+    margin-top: 50px;
+    margin-left: 25%;
     padding-bottom: 1%;
 }
 
 .contenedor {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+#sct-contenedores h2 {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#sct-contenedores p {
+    font-size: larger;
+    margin-top: 10px;
+}
+
+#contenedor2 {
     border: 1px solid black;
     width: 300px;
-    height: 400px;
-    padding: 1%;
-    margin-right: 20px;
-    align-items: center;
-}
-
-.contenedor h2 {
-    font-size: x-large;
-    text-align: center;
-    margin-bottom: 60px;
-    font-weight: bold;
-}
-
-.contenedor p {
-    text-align: center;
-}
-
-.contenedor button {
-    text-align: center;
-    font-size: larger;
-    font-weight: bold;
-    width: 290px;
-    height: 100px;
-}
-
-#sct-contenedores button:hover {
-    background-color: #d85205;
-    color: white;
-    cursor: pointer;
-}
-
-#btn-informacion {
-    margin-top: 35%;
-}
-
-#btn-preferencias {
-    margin-top: 35%;
-}
-
-#btn-pagos {
-    margin-top: 30%;
-}
-
-.fuera {
-    width: 200px;
-    height: 300px;
-    text-align: center;
-}
-
-.fuera #foto-perfil {
-    width: 150px;
-    box-sizing: border-box;
-}
-
-#btn-historial {
-    font-weight: bold;
-    height: 60px;
-    width: 1005px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-#btn-historial:hover{
-    background-color: #d85205;
-    color: white;
-}
-
-.historial {
-    padding-left: 5%;
-    padding-left: 260px;
 }

@@ -82,7 +82,7 @@ function getLibroId() {
       libroEncontrado = true;
     }
     if (libroEncontrado == true) {
-      window.location.href = "perfil_libro.html";
+      window.location.href = "perfil-libro.html";
     }
   });
 }

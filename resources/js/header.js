@@ -29,10 +29,17 @@ customNav.innerHTML = `
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Perfil</button>
 <div class="dropdown-menu">
-    <a href="/pages/login.html" class="link">Ingresar</a>
-    <a href="/pages/registration.html" class="link">Crear cuenta</a>
+    <a status="logged-out-only" href="/pages/login.html" class="link">Ingresar</a>
+    <a status="logged-out-only" href="/pages/registration.html" class="link">Crear cuenta</a>
+    <a status="login-only" href="/pages/perfil-usuario.html" class="link">Cuenta</a>
+    <a logout = call status="login-only" class="link">Log out</a>
 </div>
-</div>`;
+</div>
+`
+function logout(){
+  localStorage.removeItem('usuarioConectado')
+  console.log("AQUI")
+}
 
 document.querySelector("#head").appendChild(customHead.content);
 document.querySelector("#navigation").appendChild(customNav.content);
@@ -52,3 +59,29 @@ document.addEventListener("click", (e) => {
     dropdown.classList.remove("active");
   });
 });
+
+let showLoggedIn = document.querySelectorAll('[status="login-only"]')
+let showLoggedOut = document.querySelectorAll('[status="logged-out-only"]')
+
+console.log(showLoggedIn)
+
+if(!localStorage.getItem('usuarioConectado')){
+  showLoggedIn.forEach(e=>{
+    e.style.display="none"
+  })
+} else {
+  showLoggedOut.forEach(e=>{
+    e.style.display = "none"
+  })
+}
+
+document.querySelector('[logout=call]').addEventListener('click', ()=>{
+  Swal.fire(
+    "Ha terminado su sesión exitosamente",
+    "Vuelva pronto!",
+    "success"
+  ).then(()=>{
+    window.location.href = 'landing.html'
+    localStorage.removeItem('usuarioConectado')
+  })
+})

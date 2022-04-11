@@ -107,80 +107,79 @@ footer {
 #sct-contenedores {
     display: flex;
     padding: 5%;
-    padding-bottom: 1%;
-}
-
-.contenedor {
-    border: 1px solid black;
-    width: 300px;
-    height: 400px;
-    padding: 1%;
-    margin-right: 20px;
-    align-items: center;
-}
-
-.contenedor h2 {
-    font-size: x-large;
-    text-align: center;
-    margin-bottom: 60px;
-    font-weight: bold;
-}
-
-.contenedor p {
-    text-align: center;
-}
-
-.contenedor button {
-    text-align: center;
-    font-size: larger;
-    font-weight: bold;
-    width: 290px;
-    height: 100px;
-}
-
-#sct-contenedores button:hover {
-    background-color: #d85205;
-    color: white;
-    cursor: pointer;
-}
-
-#btn-informacion {
-    margin-top: 35%;
-}
-
-#btn-preferencias {
-    margin-top: 35%;
-}
-
-#btn-pagos {
-    margin-top: 30%;
 }
 
 .fuera {
-    width: 200px;
-    height: 300px;
-    text-align: center;
+    width: 400px;
+    height: 500px;
+
 }
 
-.fuera #foto-perfil {
-    width: 150px;
-    box-sizing: border-box;
+.fuera #foto-libro {
+    width: 325px;
 }
 
-#btn-historial {
-    font-weight: bold;
-    height: 60px;
-    width: 1005px;
+#contenedor1 {
+    /*border: 1px solid black;*/
+    padding: 1%;
+}
+
+#contenedor2 {
     border: 1px solid black;
-    cursor: pointer;
+    width: 300px;
+    padding: 1%;
 }
 
-#btn-historial:hover{
+#lapices {
+    margin-top: 20px;
+    width: 130px;
+    height: 20px;
+    /*border: 1px solid black;*/
+}
+
+#contenedor1 h2 {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#resaltar {
+    font-size: x-large;
+    margin-top: 20px;
+}
+
+#info-libro {
+    margin-top: 15px;
+    font-size: large;
+}
+
+#contenedor2 h2 {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#contenedor2 button {
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#contenedor2 button:hover {
     background-color: #d85205;
     color: white;
 }
 
-.historial {
-    padding-left: 5%;
-    padding-left: 260px;
+#info-cantidad {
+    margin-top: 50px;
+    display: flex;
+}
+
+#info-cantidad input {
+    width: 40px;
+    margin-left: 40px;
+}
+
+#contenedor2 p {
+    margin-top: 50px;
 }

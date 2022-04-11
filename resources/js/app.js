@@ -105,3 +105,43 @@ identificacionInput.oninput = function () {
     this.value = this.value.slice(0, 9);
   }
 };
+
+let usuarioForm = document.querySelectorAll(".registrar-usuario");
+let btnRegistro= document.querySelector(".btn-registro");
+
+let inputValidator = {
+  "nombre": false,
+  "primer-apellido": false,
+  "segundo-apellido": false,
+  "email": false,
+  "telefono": false,
+  "contrasena": false,
+  "confirmar-contrasena": false,
+  "tipo-id": false,
+  "identificacion": false,
+  "provincia": false,
+  "direccion-exacta": false,
+  "nombre-tarjeta": false,
+  "tarjeta": false,
+  "fecha-expiracion": false,
+  "cvv": false
+};
+
+usuarioForm.forEach((e) => {
+  e.addEventListener("input", () => {
+    let nameAtt = event.target.getAttribute("name");
+    if (event.target.value.length > 0) {
+      inputValidator[nameAtt] = true;
+    } else {
+      inputValidator[nameAtt] = false;
+    }
+    let allTrue = Object.keys(inputValidator).every((item) => {
+      return inputValidator[item] === true;
+    });
+    if (allTrue) {
+      btnRegistro.disabled = false;
+    } else {
+      btnRegistro.disabled = true;
+    }
+  });
+});

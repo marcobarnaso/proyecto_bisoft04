@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/resources/css/reset.css">
     <link rel="stylesheet" href="/resources/css/historial-compras-usuario.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
     <!--Esto es editable-->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Historial de compras</title>
@@ -15,40 +17,9 @@
 <body>
     <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
     <section id="head">
-        <div class="logo">
-            Lovelace
-        </div>
-        <div class="container-busqueda">
-            <label for="busqueda">Búsqueda</label>
-            <input type="text" name="busqueda" id="busqueda">
-        </div>
     </section>
 
     <section id="navigation">
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Catálogo</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Busqueda</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Acerca de nosotros</button>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Perfil</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Ingresar</a>
-                <a href="#" class="link">Crear cuenta</a>
-            </div>
-        </div>
     </section>
 
     <!--Aqui termina la seccion con el estandar del sitio-->
@@ -80,15 +51,16 @@
 
     </section>
     <div class="botones">
-        <button id="btn-volver">Volver al perfil</button>
+        <button id="btn-volver" onclick="window.location='/pages/perfil-usuario.html'">Volver al perfil</button>
     </div>
     <!--Esta seccion contiene el footer estandar del sitio-->
     <footer>
-        footer
     </footer>
 
     <!--Aqui se puede enlazar el codigo con Javascript-->
     <script src="/resources/js/historial-compras-usuario.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
 </body>
 
 </html>

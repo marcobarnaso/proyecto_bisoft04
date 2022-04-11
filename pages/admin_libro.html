@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/reset.css">
-    <link rel="stylesheet" href="/CSS/admin_libro.css">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/admin_libro.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
 
     <title>Administracion de libros</title>
 
@@ -21,44 +23,8 @@
 
 <body>
     <section id="head">
-        <div class="logo">
-            Logo
-        </div>
-        <div class="container-busqueda">
-            <label for="busqueda">Búsqueda</label>
-            <input type="text" name="busqueda" id="busqueda">
-        </div>
     </section>
-
     <section id="navigation">
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Catálogo</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Busqueda</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Libros</a>
-                <a href="#" class="link">Autores</a>
-            </div>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Acerca de nosotros</button>
-        </div>
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Perfil</button>
-            <div class="dropdown-menu">
-                <a href="#" class="link">Ingresar</a>
-                <a href="#" class="link">Crear cuenta</a>
-            </div>
-        </div>
-
-        <div class="dropdown" data-dropdown>
-            <button class="link" data-dropdown-button>Carrito</button>
-        </div>
     </section>
 
     <section id="sect-registro">
@@ -110,10 +76,10 @@
             <div class="input-container">
                 <label for="slt-genero">Genero</label>
                 <select name="slt-Genero" id="slt-Genero">
-                    <option value=""selected> -- Selecione un genero -- </option>
+                    <option value="" selected> -- Selecione un genero -- </option>
                     <option value="Masculino">Masculino</option>
                     <option value="Femenino">Femenino</option>
-                   
+
                 </select>
             </div>
 
@@ -193,13 +159,11 @@
         formEl.addEventListener("submit", onAddWebsite);
         tableEl.addEventListener("click", onDeleteRow);
     </script>
-    <div class="footer">
-        <p>Lovelace</p>
-    </div>
-    <script src="/js/admin_libro.js"></script>
-    <script src="/js/adminvalidacion.js"></script>
-
-
+    <footer></footer>
+    <script src="/resrources/js/admin_libro.js"></script>
+    <script src="/resources/js/adminvalidacion.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
 
 </body>
 

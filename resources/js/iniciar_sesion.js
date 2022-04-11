@@ -16,7 +16,7 @@ const validar_credenciales = () => {
             `Hola ${usuarioConectado.nombre}`,
             'success'
           ).then(()=> {
-            window.location.href = 'perfil.html'
+            window.location.href = 'perfil-usuario.html'
         })
     } else {
 

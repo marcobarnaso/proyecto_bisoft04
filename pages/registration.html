@@ -18,7 +18,7 @@
     <div id="main-container">
     <div class="registration">
         <section class="formulario-de-registro">
-            <form action="http://www.google.com/">
+            <form class="registrar-usuario" action="http://www.google.com/">
                 <h1>Registro de Nuevo Usuario</h1>
                 <div class="nombre-completo">
                     <div class="label-container">
@@ -149,7 +149,7 @@
                         <label for="fecha-expiracion">Fecha de Expiración</label>
                     </div>
                     <div class="input-container">
-                        <input type="date" name="" id="fecha-expiracion" required>
+                        <input type="date" name="fecha-expiracion" id="fecha-expiracion" required>
                     </div>
                 </div>
                 <div class="metodo-de-pago">
@@ -161,7 +161,7 @@
                     </div>
                 </div>
                 <div>
-                    <button>Registrarse</button>
+                    <button class="btn-registro" disabled>Registrarse</button>
                     <button type="button" onclick="window.location='/pages/landing.html'">Cancelar</button>
                 </div>
             </form>
