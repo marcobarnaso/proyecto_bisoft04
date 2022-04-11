@@ -27,7 +27,7 @@ customNav.innerHTML = `
 </div>
 </div>
 <div class="dropdown" data-dropdown>
-<button class="link" data-dropdown-button>Acerca de nosotros</button>
+<button class="link" data-dropdown-button onclick="window.location='/pages/nosotros.html'">Acerca de nosotros</button>
 </div>
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Perfil</button>
