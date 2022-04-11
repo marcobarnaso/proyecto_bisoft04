@@ -156,4 +156,3 @@ btnRegistro.addEventListener('click', ()=>{
     localStorage.setItem('usuarioConectado', listaUsuarios[0])
   })
 })
-
