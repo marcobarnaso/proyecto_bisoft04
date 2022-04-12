@@ -6,8 +6,8 @@ let listaUsuarios = [{
     'contrasenna': '123'
 }, {
     'tipo': 2,
-    'correo': 'macarena@gmail.com',
-    'nombre': 'Macarena Pérez Badilla',
+    'correo': 'marco@gmail.com',
+    'nombre': 'Marco Ramírez Guillén',
     'nacimiento': '1990-01-06',
     'contrasenna': '123'
 

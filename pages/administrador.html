@@ -36,7 +36,7 @@
                             </div>
                             <div class="input-container">
                                 <input class="text-input" type="text" name="nombre" id="nombre" placeholder="Nombre"
-                                    minlength="2" maxlength="46" required value="Marco">
+                                    minlength="2" maxlength="46" required value="Luis">
                             </div>
                         </div>
                         <div class="nombre-completo">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="input-container">
                                 <input class="text-input" type="text" name="primer-apellido" id="primer-apellido"
-                                    placeholder="Primer apellido" minlength="2" maxlength="50" required value="Ramírez">
+                                    placeholder="Primer apellido" minlength="2" maxlength="50" required value="Arias">
                             </div>
                         </div>
                         <div class="nombre-completo">
@@ -54,7 +54,7 @@
                             </div>
                             <div class="input-container">
                                 <input class="text-input" type="text" name="segundo-apellido" id="segundo-apellido"
-                                    placeholder="Segundo apellido" minlength="3" maxlength="50" required value="Durán">
+                                    placeholder="Segundo apellido" minlength="3" maxlength="50" required value="Mendoza">
                             </div>
                         </div>
                         <div class="label-container">
@@ -98,7 +98,7 @@
                                     <label for="provincia">Provincia</label>
                                 </div>
                                 <div class="input-container">
-                                    <select name="provincia" id="provincia-perfil" required>
+                                    <select name="provincia" id="provincia-perfil">
                                         <option class="slt-provincia-title" value="">Alajuela</option>
                                     </select>
                                 </div>
@@ -108,7 +108,7 @@
                                     <label for="canton">Cantón</label>
                                 </div>
                                 <div class="input-container">
-                                    <select name="canton" id="canton-perfil" required>
+                                    <select name="canton" id="canton-perfil">
                                         <option class="slt-canton-title" value="">Alajuela</option>
                                     </select>
                                 </div>
@@ -118,7 +118,7 @@
                                     <label for="distrito">Distrito</label>
                                 </div>
                                 <div class="input-container">
-                                    <select name="distrito" id="distrito-perfil" required>
+                                    <select name="distrito" id="distrito-perfil">
                                         <option class="slt-distrito-title" value="">San José</option>
                                     </select>
                                 </div>
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="input-container">
                                         <input type="email" name="email" id="email" placeholder="persona@dominio.com"
-                                            minlength="3" maxlength="62" required value="marco@gmail.com" disabled>
+                                            minlength="3" maxlength="62" required value="luis@gmail.com" disabled>
                                     </div>
                                     <div>
                                         <label for="btn-contrasenna"></label>
@@ -152,18 +152,18 @@
                                 <div id="contrasenna">
                                     <label for="btn-contrasenna">Contraseña</label>
                                     <div>
-                                        <button id="btn-contrasenna">Cambiar contraseña</button>
+                                        <button type="button" id="btn-contrasenna" onclick="window.location='/pages/cambiar-contrasenna.html'">Cambiar contraseña</button>
                                     </div>
                                 </div>
                             </div>
                     </form>
                 </section>
                 <section id="administracion-catalogos">
-                    <div class="administrar-container">
+                    <div class="administrar-libros">
                         <img src="/resources/img/promisedLand.jpg" alt="">
                         Administrar Libros
                     </div>
-                    <div class="administrar-container">
+                    <div class="administrar-autores">
                         <img src="/resources/img/autorObama.jpg" alt="">
                         <p>Administrar Autores</p>
                     </div>

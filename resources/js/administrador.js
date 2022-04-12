@@ -224,3 +224,11 @@ document.querySelector(".buscar-socio").addEventListener("click", () => {
   console.log(mapSrc.getAttribute("src"));
   inputBusquedaSocio.value = "";
 });
+
+document.querySelector('.administrar-autores').addEventListener('click', ()=>{
+  window.location.href = 'admin_autor.html'
+})
+
+document.querySelector('.administrar-libros').addEventListener('click', ()=>{
+  window.location.href = 'admin_libro.html'
+})

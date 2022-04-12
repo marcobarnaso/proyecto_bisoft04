@@ -2,7 +2,7 @@ const customHead = document.createElement("template");
 const customNav = document.createElement("template");
 customHead.innerHTML = `
 <div class="logo">
-Logo
+<img src="/resources/img/lovelace.jpeg" alt="lovelace">
 </div>
 <div class="container-busqueda">
 </div>
@@ -91,7 +91,6 @@ document.querySelector('[logout=call]').addEventListener('click', ()=>{
 })
 
 let currentUser = JSON.parse(localStorage.getItem('usuarioConectado'))
-if(!currentUser || currentUser.tipo == 1) {
-  console.log('AQUI!')
+if(currentUser.tipo == 1) {
   document.querySelector('[administrador="admin"]').removeAttribute("style")
 } 
