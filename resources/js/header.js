@@ -2,7 +2,7 @@ const customHead = document.createElement("template");
 const customNav = document.createElement("template");
 customHead.innerHTML = `
 <div class="logo">
-<img src="/resources/img/lovelace.jpeg" alt="lovelace">
+<img src="/resources/img/lovelace.jpeg" alt="lovelace" style="width:100px; border-radius:50%">
 </div>
 <div class="container-busqueda">
 </div>
