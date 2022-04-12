@@ -13,7 +13,7 @@ customNav.innerHTML = `
 <button administrador="admin" class="link" style="display:none" data-dropdown-button onclick="window.location='/pages/administrador.html'">Administrador</button>
 </div>
 <div class="dropdown" data-dropdown>
-<button class="link" data-dropdown-button onclick="window.location='/pages/landing.html'">Home</button>
+<button class="link" data-dropdown-button onclick="window.location='/pages/landing.html'">Página Principal</button>
 </div>
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Catálogo</button>
@@ -23,7 +23,7 @@ customNav.innerHTML = `
 </div>
 </div>
 <div class="dropdown" data-dropdown>
-<button class="link" data-dropdown-button>Busqueda</button>
+<button class="link" data-dropdown-button>Búsqueda</button>
 <div class="dropdown-menu">
     <a href="#" class="link">Libros</a>
     <a href="#" class="link">Autores</a>
