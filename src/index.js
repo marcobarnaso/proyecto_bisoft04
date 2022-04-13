@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env)
 
 const express = require("express");
 const userRouter = require("../src/db/routes/usuario");
@@ -15,9 +14,7 @@ app.use(serveSite);
 app.use(express.static("resources"));
 app.use(express.static("pages"));
 app.use("/pages", express.static(path.join(__dirname, "pages")));
-app.use("/resources", express.static("resources"));
-//app.use(express.static(__dirname + '/resources/css'))
-//app.use('/pages',express.static(__dirname + '/pages'))
+app.use("/resources", express.static(path.join(__dirname, "resources")));
 
 app.listen(port, () => {
   console.log(`Servidor local está arriba y andando en el puerto ${port}`);

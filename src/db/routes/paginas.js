@@ -4,7 +4,7 @@ const router = new express.Router()
 
 
 router.get('/', (req, res)=> {
-    res.sendFile( path.resolve('pages', 'landing.html') );
+    res.sendFile( path.resolve('src', 'pages', 'landing.html') );
 })
 
 // app.get('/', function(req, res) {
