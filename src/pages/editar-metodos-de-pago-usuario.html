@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/editar-metodos-de-pago-usuario.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
+    <!--Esto es editable-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Métodos de pago</title>
+</head>
+
+<body>
+    <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
+    <section id="head">
+    </section>
+
+    <section id="navigation">
+    </section>
+
+    <!--Aqui termina la seccion con el estandar del sitio-->
+
+    <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
+    <section id="sct-contenedores">
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <div class="contenedor">
+            <h2>Métodos de pago:</h2>
+            <!--Informacion editable para los metodos de pago-->
+            <div class="cajas-pago">
+                <div class="contenido-pago" id="pago1">
+                    <form>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="nombre-tarjeta">Nombre en la tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="nombre-tarjeta" id="nombre-tarjeta" maxlength="150" required value="Marco V Ramirez D">
+                            </div>
+                        </div>
+                        <div id="metodo-de-pago-tarjeta" class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="tarjeta">Número de tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="number" name="tarjeta" id="tarjeta" minlength="16" maxlength="16" required value="5034664655556666">
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="fecha-expiracion">Fecha de Expiración</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="" id="fecha-expiracion" required value="12/24">
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="cvv">CVV</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="number" name="cvv" id="cvv" min="0" max="9999" required value="112">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contenido-pago" id="pago2">
+                    <form>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="nombre-tarjeta">Nombre en la tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="nombre-tarjeta" id="nombre-tarjeta" maxlength="150" required>
+                            </div>
+                        </div>
+                        <div id="metodo-de-pago-tarjeta" class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="tarjeta">Número de tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="number" name="tarjeta" id="tarjeta" minlength="16" maxlength="16" required>
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="fecha-expiracion">Fecha de Expiración</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="date" name="" id="fecha-expiracion" required>
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="cvv">CVV</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="number" name="cvv" id="cvv" min="0" max="9999" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contenido-pago" id="pago3">
+                    <form>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="nombre-tarjeta">Nombre en la tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="nombre-tarjeta" id="nombre-tarjeta" maxlength="150" required>
+                            </div>
+                        </div>
+                        <div id="metodo-de-pago-tarjeta" class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="tarjeta">Número de tarjeta</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="number" name="tarjeta" id="tarjeta" minlength="16" maxlength="16" required>
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="fecha-expiracion">Fecha de Expiración</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="date" name="" id="fecha-expiracion" required>
+                            </div>
+                        </div>
+                        <div class="metodo-de-pago">
+                            <div class="label-container">
+                                <label for="cvv">CVV</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="number" name="cvv" id="cvv" min="0" max="9999" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--botones para eliminar la informacion de los metodos de pago-->
+            <div class="botones-eliminar">
+                <button id="eliminar-pago1">Eliminar</button>
+                <button id="eliminar-pago2">Eliminar</button>
+                <button id="eliminar-pago3">Eliminar</button>
+            </div>
+            <!--Esta sección contiene la informacion de tarjeta de cliente frecuente-->
+            <h2>Tarjeta cliente frecuente:</h2>
+            <div class="cliente-frecuente">
+                <div>
+                    <p id="txt-cliente-frecuente">Compras faltantes para elegibilidad: 9</p>
+                </div>
+                <div class="botones-cliente-frecuente">
+                    <button id="btn-activar">Activar</button>
+                    <button id="btn-desactivar">Desactivar</button>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+    <div class="botones">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-cancelar" onclick="window.location='/pages/perfil-usuario.html'">Cancelar</button>
+    </div>
+    <!--Esta seccion contiene el footer estandar del sitio-->
+    <footer>
+    </footer>
+
+    <!--Aqui se puede enlazar el codigo con Javascript-->
+    <script src="/resources/js/editar-metodos-de-pago-usuario.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.select-direccion {
+    display: inline-block;   
+}
+
+.metodo-de-pago {
+    display: inline-block;
+}
+
+
+.nombre-completo {
+    display: inline-block;
+}
+
+.formulario-de-registro {
+    color: black;
+    background-image: url(/resources/img/background-registration.png);
+    background-size: cover;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+
+.formulario-de-registro form label {
+    width: 175px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.input-container {
+    margin-bottom: 15px;
+}
+
+.formulario-de-registro form input {
+	width: 250px;
+	height: 25px;
+	outline: none;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	border: 3px solid #ccc;
+}
+
+.formulario-de-registro form button {
+    border: 1px solid #D65A40;
+    background: #D65A40;
+	padding: 8px 20px 8px 20px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	color: white;
+    font-weight: bold;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
+	font-size: 16px;
+    transition: 0.3s;
+}
+
+.formulario-de-registro form button:hover {
+    border: 1px solid #D65A40;
+    background: white;
+    color: #D65A40;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
+.formulario-de-registro form button:disabled {
+    border: 1px solid #D65A40;
+    background: white;
+    color: grey;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
+.formulario-de-registro form label {
+    padding-left: 3px;
+}
+
+#fecha-expiracion {
+    width: 150px;
+}
+
+#cvv {
+    width: 100px;
+}
+
+#tarjeta {
+    width: 135px;
+}
+
+#metodo-de-pago-tarjeta {
+    margin-left: 15px;
+}
+
+/* remueve el spinner en el input 
+number para Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* remueve el spinner en el input 
+number para Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.container-contrasena{
+    display: inline-block
+}
+
+.container-contrasena div{
+    display: inline-block;
+}
+
+.container-contrasena div input {
+    display: block;
+}
+

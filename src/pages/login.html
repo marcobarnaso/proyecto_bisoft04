@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <section id="login">
+        <form action="">
+            <h1>Bienvenido</h1>
+            <div class="login-container">
+                <label for="loginUsuario">Usuario</label>
+                <input type="text" name="loginUsuario" id="loginUsuario" maxlength="30" class="login-input" required>
+            </div>
+            <div class="login-container">
+                <label for="loginContrasena">Contraseña</label>
+                <input type="password" name="loginContrasena" id="loginContrasena" maxlength="25" class="login-input"
+                    required>
+            </div>
+            <button class="btn-ingresar" type="button">→</button>
+            <div>
+                <a href="/pages/cambiar-contrasenna.html">Recuperar contraseña</a>
+            </div>
+            <div>
+                <a href="/pages/registration.html">Crear cuenta</a>
+            </div>
+            <div>
+                <a href="/pages/landing.html">Página principal</a>
+            </div>
+        </form>
+    </section>
+    <script src="/resources/js/usuarios.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/resources/js/iniciar_sesion.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

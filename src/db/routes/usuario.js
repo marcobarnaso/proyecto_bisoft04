@@ -2,6 +2,7 @@ const express = require("express");
 const router = new express.Router();
 
 
+
 router.post("/user", async (req, res) => {
   console.log('USUARIO!')
   // const user = new User(req.body);

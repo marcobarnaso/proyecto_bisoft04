@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/editar-informacion-usuario.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
+    <!--Esto es editable-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Editar información personal</title>
+</head>
+
+<body>
+    <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
+    <section id="head">
+    </section>
+
+    <section id="navigation">
+    </section>
+
+    <!--Aqui termina la seccion con el estandar del sitio-->
+
+    <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
+    <section id="sct-contenedores">
+        <div class="fuera">
+            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <p>Bienvenido al perfil</p>
+        </div>
+
+        <div class="contenedor">
+            <h2>Información de la cuenta</h2>
+            <div class="contenido">
+                <section id="linea1">
+                    <form id="content">
+                        <!--Aqui se contiene la primera seccion de la informacion editable-->
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="nombre">Nombre</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="nombre" id="nombre" placeholder="Nombre" minlength="2" maxlength="46" required value="Marco">
+                            </div>
+                        </div>
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="primer-apellido">Primer Apellido</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="primer-apellido" id="primer-apellido" placeholder="Primer apellido" minlength="2" maxlength="50" required value="Ramírez">
+                            </div>
+                        </div>
+                        <div class="nombre-completo">
+                            <div class="label-container">
+                                <label for="segundo-apellido">Segundo Apellido</label>
+                            </div>
+                            <div class="input-container">
+                                <input class="text-input" type="text" name="segundo-apellido" id="segundo-apellido" placeholder="Segundo apellido" minlength="3" maxlength="50" required value="Durán">
+                            </div>
+                        </div>
+                        <div class="label-container">
+                            <label for="tipo-id">Tipo de Identificacion</label>
+                        </div>
+                        <div class="input-container">
+                            <select name="tipo-id" id="tipo-id">
+                                    <option class="slt-id-title" value="">
+                                        Cédula de identidad
+                                    </option>
+                                </select>
+                        </div>
+                        <div class="label-container">
+                            <label for="identificacion">
+                                    Identificación
+                                </label>
+                        </div>
+                        <div class="input-container">
+                            <input type="number" id="identificacion" name="identificacion" placeholder="0-0000-0000" value="504270962">
+
+                            <div class="label-container">
+                                <label for="tipo-id">Género</label>
+                            </div>
+                            <div class="input-container">
+                                <select name="tipo-id" id="tipo-id">
+                                        <option class="slt-id-title" value="">
+                                            Masculino
+                                        </option>
+                                    </select>
+                            </div>
+                        </div>
+                        <!--Aqui se contiene la segunda seccion de la informacion editable-->
+                    </form>
+                </section>
+                <section id="linea2">
+                    <form>
+                        <div id="selectores">
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="provincia">Provincia</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="provincia" id="provincia">
+                                        <option class="slt-provincia-title" value="">Alajuela</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="canton">Cantón</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="canton" id="canton">
+                                        <option class="slt-canton-title" value="">Alajuela</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="distrito">Distrito</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="distrito" id="distrito">
+                                        <option class="slt-distrito-title" value="">San José</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="label-container">
+                            <label for="direccion-exacta">Dirección Exacta</label>
+                        </div>
+                        <div class="input-container">
+                            <textarea name="direccion-exacta" id="direccion-exacta" cols="50" rows="5" placeholder="100 metros norte del River Gym, Urbanización Doña Bertilia"></textarea>
+
+                            <div id="datos">
+                                <div id="Correo">
+                                    <div class="label-container">
+                                        <label for="email">Correo electrónico</label>
+                                    </div>
+                                    <div class="input-container">
+                                        <input type="email" name="email" id="email" placeholder="persona@dominio.com" minlength="3" maxlength="62" required value="marco@gmail.com" disabled>
+                                    </div>
+                                    <div>
+                                        <label for="btn-contrasenna"></label>
+                                    </div>
+                                </div>
+                                <div id="contrasenna">
+                                    <label for="btn-contrasenna">Contraseña</label>
+                                    <div>
+                                        <button type="button" id="btn-contrasenna" onclick="window.location='/pages/cambiar-contrasenna.html'">Cambiar contraseña</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </form>
+                </section>
+                </div>
+            </div>
+
+
+
+    </section>
+    <div class="botones">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-cancelar" onclick="window.location='/pages/perfil-usuario.html'">Cancelar</button>
+    </div>
+    <!--Esta seccion contiene el footer estandar del sitio-->
+    <footer>
+    </footer>
+
+    <!--Aqui se puede enlazar el codigo con Javascript-->
+    <script src="/resources/js/editar-informacion-usuario.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
