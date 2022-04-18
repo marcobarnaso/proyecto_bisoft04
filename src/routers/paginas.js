@@ -7,8 +7,8 @@ router.get('/', (req, res)=> {
     res.sendFile( path.resolve('src', 'pages', 'landing.html') );
 })
 
-// app.get('/', function(req, res) {
-//     res.sendFile( path.resolve('src/app/index.html') );
-// });
+router.get('/about', function(req, res) {
+    res.sendFile( path.resolve('src', 'pages', 'landing.html') );
+});
 
 module.exports = router

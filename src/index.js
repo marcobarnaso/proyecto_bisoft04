@@ -1,9 +1,11 @@
 require('dotenv').config()
+require('./db/mongoose')
 
 const express = require("express");
-const userRouter = require("../src/db/routes/usuario");
-const serveSite = require("../src/db/routes/paginas");
+const userRouter = require("./routers/usuario");
+const serveSite = require("./routers/paginas");
 const path = require("path");
+const auth = require('./middleware/auth');
 
 const app = express();
 const port = process.env.PORT;
@@ -17,5 +19,5 @@ app.use("/pages", express.static(path.join(__dirname, "pages")));
 app.use("/resources", express.static(path.join(__dirname, "resources")));
 
 app.listen(port, () => {
-  console.log(`Servidor local está arriba y andando en el puerto ${port}`);
+  console.log(`El Servidor local está arriba y andando en el puerto ${port}.`);
 });
