@@ -5,6 +5,10 @@ const jwt = require("jsonwebtoken")
 
 const userSchema = new mongoose.Schema(
   {
+    type: {
+      type: Number,
+      default: 1
+    },
     name: {
       type: String,
       required: true,
@@ -60,17 +64,17 @@ const userSchema = new mongoose.Schema(
       unique: true
     },
     provincia: {
-      type: String,
+      type: Number,
       required: true,
       trim: true,
     },
     canton: {
-      type: String,
+      type: Number,
       required: true,
       trim: true,
     },
     distrito: {
-      type: String,
+      type: Number,
       required: true,
       trim: true,
     },

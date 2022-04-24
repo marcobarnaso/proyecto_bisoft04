@@ -11,7 +11,12 @@ const provincias = [
 
 const cantonesURL = "https://ubicaciones.paginasweb.cr/provincia/";
 let distritosURL = "";
-
+let firstName = document.querySelector('#nombre');
+let lastName = document.querySelector('#primer-apellido');
+let secondLastName = document.querySelector('#segundo-apellido');
+let email = document.querySelector('#email')
+let phone = document.querySelector('#telefono')
+let password = document.querySelector('#contrasena')
 let select_id = document.querySelector("#tipo-id");
 let select_provincia = document.querySelector("#provincia");
 let select_canton = document.querySelector("#canton");
@@ -19,6 +24,7 @@ let select_distrito = document.querySelector("#distrito");
 let cvvInput = document.querySelector("#cvv");
 let tarjetaInput = document.querySelector("#tarjeta");
 let identificacionInput = document.querySelector("#identificacion");
+let address = document.querySelector('#direccion-exacta')
 
 for (i = 0; i < tipo_id.length; i++) {
   let option = document.createElement("option");
@@ -146,13 +152,26 @@ usuarioForm.forEach((e) => {
   });
 });
 
-btnRegistro.addEventListener('click', ()=>{
-  Swal.fire(
-    "Bienvenido",
-    `${listaUsuarios[0].nombre}`,
-    "success"
-  ).then(()=>{
-    window.location.href = 'landing.html'
-    localStorage.setItem('usuarioConectado', listaUsuarios[0])
-  })
-})
+function getData(){
+  let data = {
+    "name": firstName.value,
+    "lastName": lastName.value,
+    "secondLastName": secondLastName.value,
+    "email": email.value,
+    "phone": telefono.value,
+    "password": password.value,
+    "idType": select_id.value,
+    "identification": identificacionInput.value,
+    "provincia": select_provincia.value,
+    "canton": select_canton.value,
+    "distrito": select_distrito.value,
+    "address": address.value,
+    // "nombre-tarjeta": "",
+    // "tarjeta": "",
+    // "fecha-expiracion": "",
+    // "cvv": ""
+  }
+  registrarDatos('user', data, 'landing.html')
+}
+
+btnRegistro.addEventListener('click', getData)
