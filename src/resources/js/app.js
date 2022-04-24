@@ -68,8 +68,13 @@ const obtener_distritos = async (canton) => {
 
 select_provincia.addEventListener("change", () => {
   document.querySelector(".slt-provincia-title").style.display = "none";
-  provincia_id = event.target.value;
-  distritosURL = `https://ubicaciones.paginasweb.cr/provincia/${provincia_id}`;
+  //provincia_id = event.target.value
+  provincia_id = {
+    indiceProvincia: event.target.value,
+    nombreProvincia: select_provincia.options[select_provincia.selectedIndex].text
+  };
+  console.log(select_provincia.options[select_provincia.selectedIndex].text)
+  distritosURL = `https://ubicaciones.paginasweb.cr/provincia/${provincia_id.indiceProvincia}`;
   select_canton.innerHTML = "";
   while (select_canton.lastChild) {
     select_canton.removeChild(select_canton.lastChild);
@@ -77,17 +82,20 @@ select_provincia.addEventListener("change", () => {
   while (select_distrito.lastChild) {
     select_distrito.removeChild(select_distrito.lastChild);
   }
-  obtener_cantones(provincia_id);
+  obtener_cantones(provincia_id.indiceProvincia);
   obtener_distritos(1)
   select_canton.removeAttribute('disabled')
   select_distrito.removeAttribute('disabled')
 });
 
 select_canton.addEventListener("change", () => {
-  let canton_id = event.target.value;
+  let canton_id = {
+    indiceCanton: event.target.value,
+    nombreCanton: select_canton.options[select_canton.selectedIndex].text
+  }
   select_distrito.innerHTML = "";
 
-  obtener_distritos(canton_id);
+  obtener_distritos(canton_id.indiceCanton);
 });
 
 select_id.addEventListener("change", () => {
@@ -162,9 +170,9 @@ function getData(){
     "password": password.value,
     "idType": select_id.value,
     "identification": identificacionInput.value,
-    "provincia": select_provincia.value,
-    "canton": select_canton.value,
-    "distrito": select_distrito.value,
+    "provincia": select_provincia.options[select_provincia.selectedIndex].text,
+    "canton": select_canton.options[select_canton.selectedIndex].text,
+    "distrito": select_distrito.options[select_distrito.selectedIndex].text,
     "address": address.value,
     // "nombre-tarjeta": "",
     // "tarjeta": "",

@@ -64,17 +64,17 @@ const userSchema = new mongoose.Schema(
       unique: true
     },
     provincia: {
-      type: Number,
+      type: String,
       required: true,
       trim: true,
     },
     canton: {
-      type: Number,
+      type: String,
       required: true,
       trim: true,
     },
     distrito: {
-      type: Number,
+      type: String,
       required: true,
       trim: true,
     },
