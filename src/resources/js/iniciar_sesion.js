@@ -23,4 +23,12 @@ const validar_credenciales = () => {
     }
 }
 
-document.querySelector('.btn-ingresar').addEventListener('click', validar_credenciales)
+function getData(){
+    let data = {
+        email: input_usuario.value,
+        password: input_contrasena.value
+    }
+    login('user/login', data, 'landing.html')
+}
+
+document.querySelector('.btn-ingresar').addEventListener('click', getData)

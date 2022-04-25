@@ -94,14 +94,14 @@ router.post("/user/login", async (req, res) => {
     const token = await user.generateAuthToken();
     res.status(200).send({ user, token });
   } catch (e) {
-    res.status(400).send();
+    res.status(400).send('Usuario o contraseña incorrecto.');
   }
 });
 
 router.post("/users/logout", auth, async (req, res) => {
   const user = req.user;
-  const token = req.token;
-
+  const token = req.token; //mandar el user y el token en el request para deslogear
+  console.log(req)
   try {
     user.tokens = user.tokens.filter((e) => {
       return e.token != token; // si el token es igual al token que se esta iterando del user, entonces se filtra y se remueve del array de tokens

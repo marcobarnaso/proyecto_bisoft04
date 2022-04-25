@@ -42,11 +42,6 @@ customNav.innerHTML = `
 </div>
 </div>
 `
-function logout(){
-  localStorage.removeItem('usuarioConectado')
-  console.log("AQUI")
-}
-
 document.querySelector("#head").appendChild(customHead.content);
 document.querySelector("#navigation").appendChild(customNav.content);
 
@@ -80,17 +75,10 @@ if(!localStorage.getItem('usuarioConectado')){
 }
 
 document.querySelector('[logout=call]').addEventListener('click', ()=>{
-  Swal.fire(
-    "Ha terminado su sesión exitosamente",
-    "Vuelva pronto!",
-    "success"
-  ).then(()=>{
-    window.location.href = 'landing.html'
-    localStorage.removeItem('usuarioConectado')
-  })
+  logout('landing.html')
 })
 
 let currentUser = JSON.parse(localStorage.getItem('usuarioConectado'))
-if(currentUser.tipo == 1) {
+if(currentUser.user.type == 1) {
   document.querySelector('[administrador="admin"]').removeAttribute("style")
 } 
