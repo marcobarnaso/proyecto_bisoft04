@@ -28,7 +28,7 @@
     </section>
 
     <section id="sect-registro">
-        <form>
+        <form id="registrar-libro">
             <h1>Administración de libros</h1>
             <div class="input-container">
                 <label for="txt-Isbn">Isbn</label>
@@ -85,7 +85,7 @@
             </div>
 
 
-            <button id="btn-registrar">Registrar</button>
+            <button type="button" id="btn-registrar">Registrar</button>
 
         </form>
 
@@ -113,60 +113,60 @@
 
     </section>
     <script>
-        const formEl = document.querySelector("form");
-        const tbodyEl = document.querySelector("tbody");
-        const tableEl = document.querySelector("table");
+        // const formEl = document.querySelector("form");
+        // const tbodyEl = document.querySelector("tbody");
+        // const tableEl = document.querySelector("table");
 
-        function onAddWebsite(e) {
-            e.preventDefault();
-            const isbn = document.getElementById("txt-Isbn").value;
-            const titulo = document.getElementById("txt-titulo").value;
-            const autor = document.getElementById("txt-Autor").value;
-            const editorial = document.getElementById("txt-Editorial").value;
-            const anno = document.getElementById("txt-Anno").value;
-            const resenna = document.getElementById("txt-Resenna").value;
-            const premio = document.getElementById("txt-Premio").value;
-            const precio = document.getElementById("txt-Precio").value;
-            const descuento = document.getElementById("txt-Descuento").value;
-            const Imagen = document.getElementById("txt-Imagen").value;
-            const Genero = document.getElementById("slt-Genero").value;
-            tbodyEl.innerHTML += `
-            <tr>
-                <td>${isbn}</td>
-                <td>${titulo}</td>
-                <td>${autor}</td>
-                <td>${editorial}</td>
-                <td>${anno}</td>
-                <td>${resenna}</td>
-                <td>${premio}</td>
-                <td>${precio}</td>
-                <td>${descuento}</td>
-                <td>${Imagen}</td>
-                <td>${Genero}</td>
-                <td><button class="deleteBtn">Borrar</button></td>
-            </tr>
-        `;
-        }
+        // function onAddWebsite(e) {
+        //     e.preventDefault();
+        //     const isbn = document.getElementById("txt-Isbn").value;
+        //     const titulo = document.getElementById("txt-titulo").value;
+        //     const autor = document.getElementById("txt-Autor").value;
+        //     const editorial = document.getElementById("txt-Editorial").value;
+        //     const anno = document.getElementById("txt-Anno").value;
+        //     const resenna = document.getElementById("txt-Resenna").value;
+        //     const premio = document.getElementById("txt-Premio").value;
+        //     const precio = document.getElementById("txt-Precio").value;
+        //     const descuento = document.getElementById("txt-Descuento").value;
+        //     const Imagen = document.getElementById("txt-Imagen").value;
+        //     const Genero = document.getElementById("slt-Genero").value;
+        //     tbodyEl.innerHTML += `
+        //     <tr>
+        //         <td>${isbn}</td>
+        //         <td>${titulo}</td>
+        //         <td>${autor}</td>
+        //         <td>${editorial}</td>
+        //         <td>${anno}</td>
+        //         <td>${resenna}</td>
+        //         <td>${premio}</td>
+        //         <td>${precio}</td>
+        //         <td>${descuento}</td>
+        //         <td>${Imagen}</td>
+        //         <td>${Genero}</td>
+        //         <td><button class="deleteBtn">Borrar</button></td>
+        //     </tr>
+        // `;
+        // }
 
-        function onDeleteRow(e) {
-            if (!e.target.classList.contains("deleteBtn")) {
-                return;
-            }
+        // function onDeleteRow(e) {
+        //     if (!e.target.classList.contains("deleteBtn")) {
+        //         return;
+        //     }
 
-            const btn = e.target;
-            btn.closest("tr").remove();
-        }
+        //     const btn = e.target;
+        //     btn.closest("tr").remove();
+        // }
 
-        formEl.addEventListener("submit", onAddWebsite);
-        tableEl.addEventListener("click", onDeleteRow);
+        // formEl.addEventListener("submit", onAddWebsite);
+        // tableEl.addEventListener("click", onDeleteRow);
     </script>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/resources/js/servicio_general.js"></script>
-    <script src="/resrources/js/admin_libro.js"></script>
-    <script src="/resources/js/adminvalidacion.js"></script>
-    <script src="/resources/js/header.js"></script>
-    <script src="/resources/js/footer.js"></script>
+    <script src="../resources/js/servicio_general.js"></script>
+    <script src="../resources/js/admin_libro.js"></script>
+    <!-- <script src="/resources/js/adminvalidacion.js"></script> -->
+    <script src="../resources/js/header.js"></script>
+    <script src="../resources/js/footer.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>

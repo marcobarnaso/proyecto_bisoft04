@@ -1,11 +1,12 @@
-require('dotenv').config()
-require('./db/mongoose')
+require("dotenv").config();
+require("./db/mongoose");
 
 const express = require("express");
 const userRouter = require("./routers/usuario");
 const serveSite = require("./routers/paginas");
+const libroRouter = require("./routers/libro");
 const path = require("path");
-const auth = require('./middleware/auth');
+const auth = require("./middleware/auth");
 
 const app = express();
 const port = process.env.PORT;
@@ -13,6 +14,7 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(userRouter);
 app.use(serveSite);
+app.use(libroRouter);
 app.use(express.static("resources"));
 app.use(express.static("pages"));
 app.use("/pages", express.static(path.join(__dirname, "pages")));
