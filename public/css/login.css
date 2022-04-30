@@ -20,7 +20,7 @@ body {
 }
 
 #login form{
-    background-image: url(/resources/img/login-background.png);
+    background-image: url(/img/login-background.png);
     background-size: cover;
     padding: 190px 10px 60px 10px;
     display: flex;

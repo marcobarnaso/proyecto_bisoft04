@@ -2,7 +2,6 @@ const express = require("express");
 const router = new express.Router();
 const Libro = require("../models/libro");
 const auth = require("../middleware/auth");
-const { send } = require("process");
 
 router.post("/libros", auth, async (req, res) => {
   const libro = new Libro(req.body);

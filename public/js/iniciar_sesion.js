@@ -16,7 +16,7 @@ const validar_credenciales = () => {
             `Hola ${usuarioConectado.nombre}`,
             'success'
           ).then(()=> {
-            window.location.href = 'perfil-usuario.html'
+            window.location.href = 'usuario'
         })
     } else {
 
@@ -28,7 +28,7 @@ function getData(){
         email: input_usuario.value,
         password: input_contrasena.value
     }
-    login('user/login', data, 'landing.html')
+    login('user/login', data, '/')
 }
 
 document.querySelector('.btn-ingresar').addEventListener('click', getData)

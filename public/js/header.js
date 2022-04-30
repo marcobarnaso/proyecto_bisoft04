@@ -2,7 +2,7 @@ const customHead = document.createElement("template");
 const customNav = document.createElement("template");
 customHead.innerHTML = `
 <div class="logo">
-<img src="/resources/img/lovelace.jpeg" alt="lovelace" style="width:100px; border-radius:50%">
+<img src="/img/lovelace.jpeg" alt="lovelace" style="width:100px; border-radius:50%">
 </div>
 <div class="container-busqueda">
 </div>
@@ -10,16 +10,16 @@ customHead.innerHTML = `
 `;
 customNav.innerHTML = `
 <div class="dropdown" data-dropdown>
-<button administrador="admin" class="link" style="display:none" data-dropdown-button onclick="window.location='/pages/administrador.html'">Administrador</button>
+<button administrador="admin" class="link" style="display:none" data-dropdown-button onclick="window.location='/admin'">Administrador</button>
 </div>
 <div class="dropdown" data-dropdown>
-<button class="link" data-dropdown-button onclick="window.location='/pages/landing.html'">Página Principal</button>
+<button class="link" data-dropdown-button onclick="window.location='/'">Página Principal</button>
 </div>
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Catálogo</button>
 <div class="dropdown-menu">
-    <a href="/pages/perfil-libro.html" class="link">Libros</a>
-    <a href="/pages/perfil-autor.html" class="link">Autores</a>
+    <a href="/libro" class="link">Libros</a>
+    <a href="/autor" class="link">Autores</a>
 </div>
 </div>
 <div class="dropdown" data-dropdown>
@@ -30,14 +30,14 @@ customNav.innerHTML = `
 </div>
 </div>
 <div class="dropdown" data-dropdown>
-<button class="link" data-dropdown-button onclick="window.location='/pages/nosotros.html'">Acerca de nosotros</button>
+<button class="link" data-dropdown-button onclick="window.location='/nosotros'">Acerca de nosotros</button>
 </div>
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Perfil</button>
 <div class="dropdown-menu">
-    <a status="logged-out-only" href="/pages/login.html" class="link">Ingresar</a>
-    <a status="logged-out-only" href="/pages/registration.html" class="link">Crear cuenta</a>
-    <a status="login-only" href="/pages/perfil-usuario.html" class="link">Cuenta</a>
+    <a status="logged-out-only" href="/login" class="link">Ingresar</a>
+    <a status="logged-out-only" href="/registro" class="link">Crear cuenta</a>
+    <a status="login-only" href="/usuario" class="link">Cuenta</a>
     <a logout = call status="login-only" class="link">Log out</a>
 </div>
 </div>
@@ -75,7 +75,7 @@ if(!localStorage.getItem('usuarioConectado')){
 }
 
 document.querySelector('[logout=call]').addEventListener('click', ()=>{
-  logout('landing.html')
+  logout('/')
 })
 
 let currentUser = JSON.parse(localStorage.getItem('usuarioConectado'))

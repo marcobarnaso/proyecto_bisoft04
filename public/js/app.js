@@ -179,7 +179,7 @@ function getData(){
     // "fecha-expiracion": "",
     // "cvv": ""
   }
-  registrarDatos('user', data, 'landing.html')
+  registrarDatos('user', data, '/')
 }
 
 btnRegistro.addEventListener('click', getData)

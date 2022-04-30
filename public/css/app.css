@@ -33,7 +33,7 @@ h1 {
 
 .formulario-de-registro {
     color: black;
-    background-image: url(/resources/img/background-registration.png);
+    background-image: url(/img/background-registration.png);
     background-size: cover;
     padding: 30px;
     border-radius: 10px;

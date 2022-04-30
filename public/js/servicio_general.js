@@ -86,7 +86,7 @@ const logout = async (redireccion) => {
   let token = localData.token;
   console.log(`Bearer ${token}`);
   await axios({
-    url: "http://localhost:3000/users/logout",
+    url: "/users/logout",
     method: "post",
     responseType: "json",
     data: localStorage.getItem("usuarioConectado"),

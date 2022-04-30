@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/css/reset.css">
-    <link rel="stylesheet" href="/resources/css/editar-informacion-usuario.css">
-    <link rel="stylesheet" href="/resources/css/header.css">
-    <link rel="stylesheet" href="/resources/css/footer.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/editar-informacion-usuario.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!--Esto es editable-->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Editar información personal</title>
@@ -27,7 +27,7 @@
     <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
     <section id="sct-contenedores">
         <div class="fuera">
-            <img src="/resources/img/imagenPerfil.jpg" id="foto-perfil">
+            <img src="/img/imagenPerfil.jpg" id="foto-perfil">
             <p>Bienvenido al perfil</p>
         </div>
 
@@ -149,7 +149,7 @@
                                 <div id="contrasenna">
                                     <label for="btn-contrasenna">Contraseña</label>
                                     <div>
-                                        <button type="button" id="btn-contrasenna" onclick="window.location='/pages/cambiar-contrasenna.html'">Cambiar contraseña</button>
+                                        <button type="button" id="btn-contrasenna" onclick="window.location='/cambio-contrasena'">Cambiar contraseña</button>
                                     </div>
                                 </div>
                             </div>
@@ -164,7 +164,7 @@
     </section>
     <div class="botones">
         <button id="btn-guardar">Guardar</button>
-        <button id="btn-cancelar" onclick="window.location='/pages/perfil-usuario.html'">Cancelar</button>
+        <button id="btn-cancelar" onclick="window.location='/usuario'">Cancelar</button>
     </div>
     <!--Esta seccion contiene el footer estandar del sitio-->
     <footer>
@@ -172,10 +172,10 @@
 
     <!--Aqui se puede enlazar el codigo con Javascript-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/resources/js/servicio_general.js"></script>
-    <script src="/resources/js/editar-informacion-usuario.js"></script>
-    <script src="/resources/js/header.js"></script>
-    <script src="/resources/js/footer.js"></script>
+    <script src="/js/servicio_general.js"></script>
+    <script src="/js/editar-informacion-usuario.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
