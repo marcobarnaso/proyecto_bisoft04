@@ -4,6 +4,7 @@ require("./db/mongoose");
 const express = require("express");
 const userRouter = require("./routers/usuario");
 const libroRouter = require("./routers/libro");
+const autorRouter = require("./routers/autor")
 const path = require("path");
 
 const app = express();
@@ -12,7 +13,7 @@ const port = process.env.PORT;
 app.use(express.json());
 app.use(userRouter);
 app.use(libroRouter);
-
+app.use(autorRouter)
 const publicDirectoryPath = path.join(__dirname, '../public')
 
 app.set('views', path.join(__dirname, '../templates/views'))

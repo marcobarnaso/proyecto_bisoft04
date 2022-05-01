@@ -7,6 +7,7 @@ const container1 = document.querySelector(".container-horizontal-scroll1");
 
 
 
+
 document.addEventListener("click", (e) => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]");
     if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
@@ -22,3 +23,4 @@ document.addEventListener("click", (e) => {
         dropdown.classList.remove("active");
     });
 });
+

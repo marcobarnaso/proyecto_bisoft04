@@ -1,5 +1,5 @@
 const registrarDatos = async (endpoint, data, redireccion) => {
-  let url = `http://localhost:3000/${endpoint}`;
+  let url = `/${endpoint}`;
   await axios({
     url: url,
     method: "post",
@@ -28,7 +28,7 @@ const registrarLibro = async (endpoint, data) => {
   let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
   let token = localData.token;
 
-  let url = `http://localhost:3000/${endpoint}`;
+  let url = `/${endpoint}`;
   await axios({
     url: url,
     method: "post",
@@ -55,7 +55,7 @@ const registrarLibro = async (endpoint, data) => {
 };
 
 const login = async (endpoint, data, redireccion) => {
-  let url = `http://localhost:3000/${endpoint}`;
+  let url = `/${endpoint}`;
   await axios({
     url: url,
     method: "post",
@@ -117,7 +117,7 @@ const borrarLibro = async (endpoint, data) => {
     let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
     let token = localData.token;
   
-    let url = `http://localhost:3000/${endpoint}`;
+    let url = `/${endpoint}`;
     await axios({
       url: url,
       method: "delete",
@@ -146,7 +146,7 @@ const borrarLibro = async (endpoint, data) => {
 const obtenerDatos = async (endpoint) => {
   let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
   let token = localData.token;
-  let url = `http://localhost:3000/${endpoint}`;
+  let url = `/${endpoint}`;
   let listaDatos = [];
   await axios({
     url: url,
