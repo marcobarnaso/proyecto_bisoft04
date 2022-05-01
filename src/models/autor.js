@@ -30,7 +30,7 @@ const autorSchema = new mongoose.Schema(
         }],
         awards: [{
             award: {
-                type: award,
+                type: String,
                 trim: true,
             }
         }],
