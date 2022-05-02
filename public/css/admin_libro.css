@@ -130,6 +130,16 @@
     width: 150px;
 }
 
+#sect-registro form button:disabled {
+    border: 1px solid #D65A40;
+    background: white;
+    color: grey;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
+}
+
 td:nth-child(even),
 th:nth-child(even) {
     background-color: #D6EEEE;

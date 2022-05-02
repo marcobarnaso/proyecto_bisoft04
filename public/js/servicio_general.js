@@ -54,6 +54,36 @@ const registrarLibro = async (endpoint, data) => {
     });
 };
 
+const registrarAutor = async (endpoint, data) => {
+  let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+  let token = localData.token;
+
+  let url = `/${endpoint}`;
+  await axios({
+    url: url,
+    method: "post",
+    responseType: "json",
+    data: data,
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  })
+    .then((response) => {
+      Swal.fire({
+        icon: "success",
+        title: `Nuevo Autor Registrado`,
+        text: data.name,
+      });
+    })
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Ha ocurrido un error",
+        text: error,
+      });
+    });
+};
+
 const login = async (endpoint, data, redireccion) => {
   let url = `/${endpoint}`;
   await axios({

@@ -1,0 +1,195 @@
+/* Aqui comienza el template del estandar del sitio */
+
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#head {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d85205;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navigation {
+    margin-top: 10px;
+    height: 40px;
+    background-color: #d85205;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+    padding: .5rem;
+    gap: 1rem;
+}
+
+.link {
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-family: inherit;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.link:hover {
+    color: #c23616;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    background-color: #d85205;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, .2);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.link {
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.dropdown.active>.link+.dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.container-busqueda {
+    margin: 40px 10px 0px 0px;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: #d85205;
+    border: 1px solid white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-busqueda {
+    margin: 40px 10px 0px 0px;
+}
+
+
+/* Aqui termina el template del estandar del sitio*/
+
+
+/* A partir de aqui le puedes dar estilo al contenido del wireframe que no pertenece al estandar*/
+
+h1 {
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.info-carrito {
+    display: flex;
+}
+
+#libro-agregado {
+    /*border: 1px solid black;*/
+    margin-left: 1%;
+    margin-top: 3%;
+    display: flex;
+    width: 73%;
+    height: 300px;
+}
+
+#opcion-proceder-compra {
+    border: 1px solid black;
+    width: 23%;
+    height: 300px;
+    margin-left: 1%;
+    margin-top: 3%;
+    text-align: center;
+}
+
+#contenedor-img {
+    width: 40%;
+    height: 300px;
+}
+
+p {
+    font-size: larger;
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#total {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#btn-compra {
+    width: 98%;
+    height: 20%;
+    margin-top: 50%;
+    font-size: large;
+    font-weight: bolder;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #d85205;
+    color: white;
+}
+
+#nombre-autor {
+    margin-top: 30px;
+}
+
+#cantidad {
+    margin-top: 30px;
+}
+
+#btn-eliminar {
+    margin-top: 30px;
+}
+
+#precio {
+    margin-top: 30px;
+    display: flex;
+}
+
+#descuento {
+    margin-top: 30px;
+    display: flex;
+}
+
+#suma-carrito-compras {
+    margin-top: 30px;
+}

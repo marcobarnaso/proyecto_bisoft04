@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/css/reset.css">
+    <link rel="stylesheet" href="/resources/css/confirmar-compra.css">
+    <link rel="stylesheet" href="/resources/css/header.css">
+    <link rel="stylesheet" href="/resources/css/footer.css">
+    <!--Esto es editable-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <title>Confirmación de compra</title>
+</head>
+
+<body>
+    <section id="head"></section>
+    <section id="navigation"></section>
+    <!-- Esta seccion contiene el estandar del header y menu de navegacion del sitio -->
+    <section id="head">
+    </section>
+
+    <section id="navigation">
+    </section>
+
+    <!--Aqui termina la seccion con el estandar del sitio-->
+
+    <!--Aqui se trabaja el contenido del wireframe de cada pagina-->
+    <section id="sct-contenedores">
+
+        <h1>Confirmación de compra</h1>
+
+        <div id="proceso-compra">
+
+            <div id="opciones-compra">
+                <div class="contenedor">
+                    <p>Método de pago: </p>
+                    <div>
+                        <form>
+                            <input type="radio" id="Metodo1" value="1" name="metodo-pago">
+                            <label for="Metodo1">Método 1</label><br>
+
+                            <input type="radio" id="metodo2" value="2" name="metodo-pago">
+                            <label for="metodo2">Método 2</label><br>
+
+                            <input type="radio" id="metodo3" value="3" name="metodo-pago">
+                            <label for="metodo3">método 3</label><br>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="direccion">
+                    <p>Dirección: </p>
+                    <div></div>
+                    <div id="direccion">
+                        <div id="selectores">
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="provincia">Provincia</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="provincia" id="provincia">
+                                        <option class="slt-provincia-title" value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="canton">Cantón</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="canton" id="canton">
+                                        <option class="slt-canton-title" value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="select-direccion">
+                                <div class="label-container">
+                                    <label for="distrito">Distrito</label>
+                                </div>
+                                <div class="input-container">
+                                    <select name="distrito" id="distrito">
+                                        <option class="slt-distrito-title" value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="label-container">
+                            <label for="direccion-exacta">Dirección Exacta: </label>
+                        </div>
+                        <div class="input-container">
+                            <textarea name="direccion-exacta" id="direccion-exacta" cols="50" rows="5" placeholder="Dirección exacta"></textarea>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="opciones-compra2">
+                <p>Tarjeta libro fan: </p>
+                <form>
+                    <input type="radio" id="usar" value="1" name="tarjeta-libro-fan">
+                    <label for="usar">Usar</label>
+
+                    <input type="radio" id="no-usar" value="2" name="tarjeta-libro-fan">
+                    <label for="no-usar">No usar</label>
+                </form>
+            </div>
+
+            <div id="detalle-compra">
+                <h2>Total de compra:</h2>
+                <p id="suma-carrito-compras">0.0</p>
+                <button id="btn-pagar">Pagar</button>
+            </div>
+        </div>
+    </section>
+    <!--  <div class="botones">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-cancelar">Cancelar</button>
+    </div> -->
+    <!--Esta seccion contiene el footer estandar del sitio-->
+    <footer>
+    </footer>
+
+    <!--Aqui se puede enlazar el codigo con Javascript-->
+    <script src="/resources/js/carrito-de-compras.js"></script>
+    <script src="/resources/js/header.js"></script>
+    <script src="/resources/js/footer.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

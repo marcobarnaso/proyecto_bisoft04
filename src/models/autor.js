@@ -2,12 +2,21 @@ const mongoose = require ('mongoose')
 
 const autorSchema = new mongoose.Schema(
     {
+        picture: {
+            type: String,
+        },
         country: {
             type: String,
             trim: true,
             required: true
         },
-        brithdate: {
+        name: {
+            type: String,
+            trim: true,
+            required: true,
+            unique: true
+        },
+        birthDate: {
             type: String,
             trim: true,
             required: true
@@ -16,24 +25,16 @@ const autorSchema = new mongoose.Schema(
             type: String,
             trim: true
         },
-        genere: {
+        publishedBooks: {
             type: String,
             trim: true,
             required: true
         },
-        publishedBooks: [{
-            book: {
-                type: String,
-                trim: true,
-                required: true
-            }
-        }],
-        awards: [{
-            award: {
-                type: String,
-                trim: true,
-            }
-        }],
+        awards: {
+            type: String,
+            trim: true,
+            required: true
+        },
         review: {
             type: String,
             trim: true,

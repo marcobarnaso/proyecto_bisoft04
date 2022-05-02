@@ -94,6 +94,41 @@ function onDeleteRow(e) {
   borrarLibro('libros', data)
 }
 
+let inputValidator = {
+  "txt-Isbn": false,
+  "txt-titulo": false,
+  "txt-Autor": false,
+  "txt-Editorial": false,
+  "txt-Anno": false,
+  "txt-Resenna": false,
+  "txt-Premio": false,
+  "txt-Precio": false,
+  "txt-Descuento": false,
+  "txt-Imagen": false,
+  "slt-Genero": false,
+};
+
+let formElements = document.querySelectorAll('#registrar-libro')
+
+formElements.forEach((e) => {
+  e.addEventListener("input", () => {
+    let nameAtt = event.target.getAttribute("id");
+    if (event.target.value.length > 0) {
+      inputValidator[nameAtt] = true;
+    } else {
+      inputValidator[nameAtt] = false;
+    }
+    let allTrue = Object.keys(inputValidator).every((item) => {
+      return inputValidator[item] === true;
+    });
+    if (allTrue) {
+      registroBtn.disabled = false;
+    } else {
+      registroBtn.disabled = true;
+    }
+  });
+});
+
 tableEl.addEventListener("click", onDeleteRow);
 
 function getData() {

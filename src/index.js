@@ -82,6 +82,14 @@ app.get('/registro', (req, res)=>{
   res.render('registration')
 })
 
+app.get('/carrito', (req, res)=>{
+  res.render('carrito-de-compras')
+})
+
+app.get('/confirmar-compra', (req, res)=>{
+  res.render('confirmar-compra')
+})
+
 app.listen(port, () => {
   console.log(`El Servidor local está arriba y andando en el puerto ${port}.`);
 });

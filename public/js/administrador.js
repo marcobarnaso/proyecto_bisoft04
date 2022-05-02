@@ -226,9 +226,9 @@ document.querySelector(".buscar-socio").addEventListener("click", () => {
 });
 
 document.querySelector('.administrar-autores').addEventListener('click', ()=>{
-  window.location.href = '/autor'
+  window.location.href = '/admin-autor'
 })
 
 document.querySelector('.administrar-libros').addEventListener('click', ()=>{
-  window.location.href = '/libro'
+  window.location.href = '/admin-libro'
 })

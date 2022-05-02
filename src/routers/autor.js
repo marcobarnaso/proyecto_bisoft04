@@ -13,4 +13,13 @@ router.post("/autor", auth, async (req, res) => {
   }
 });
 
+router.get("/autor", auth, async(req, res)=> {
+    try {
+        let autores = await Autor.find({})
+        res.status(200).send(autores)
+    } catch (e) {
+       res.status(500).send(`Error ${e}`) 
+    }
+})
+
 module.exports = router
