@@ -1,4 +1,6 @@
 const express = require("express");
+const multer = require('multer')
+const sharp = require('sharp')
 const router = new express.Router();
 const Libro = require("../models/libro");
 const auth = require("../middleware/auth");
@@ -31,6 +33,49 @@ router.delete("/libros", auth, async (req, res) => {
     } catch (e) {
         res.status(500).send(e)
     }
+})
+
+const upload = multer({
+  limits: {
+      fileSize: 1000000
+  },
+  fileFilter(req, file, cb) {
+      if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+          return cb(new Error('Please upload an image'))
+      }
+
+      cb(undefined, true)
+  }
+})
+
+router.post('/libro/portada', auth, upload.single('cover'), async (req, res) => {
+  let libro = await Libro.findOne({"isbn":req.body.isbn})
+  const buffer = await sharp(req.file.buffer).resize({ width: 80, height: 127 }).png().toBuffer()
+  libro.cover = buffer
+  await libro.save()
+  res.send()
+}, (error, req, res, next) => {
+  res.status(400).send({ error: error.message })
+})
+
+router.delete('/libro/portada', auth, async (req, res) => {
+  req.user.avatar = undefined
+  await req.user.save()
+  res.send()
+})
+
+router.get('/libro/portada/:isbn', async (req, res) => {
+  try {
+      const libro = await Libro.findOne({"isbn":req.params.isbn})
+      if (!libro || !libro.cover) {
+          throw new Error()
+      }
+
+      res.set('Content-Type', 'image/jpg')
+      res.send(libro.cover)
+  } catch (e) {
+      res.status(404).send()
+  }
 })
 
 module.exports = router

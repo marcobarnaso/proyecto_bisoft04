@@ -48,9 +48,7 @@ const libroSchema = new mongoose.Schema(
       required: true,
     },
     cover: {
-      type: String,
-      trim: true,
-      required: true,
+      type: Buffer
     },
     genere: {
       type: String,

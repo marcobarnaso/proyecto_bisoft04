@@ -5,12 +5,14 @@ const express = require("express");
 const userRouter = require("./routers/usuario");
 const libroRouter = require("./routers/libro");
 const autorRouter = require("./routers/autor")
+const cors = require('cors')
 const path = require("path");
 
 const app = express();
 const port = process.env.PORT;
 
 app.use(express.json());
+app.use(cors())
 app.use(userRouter);
 app.use(libroRouter);
 app.use(autorRouter)

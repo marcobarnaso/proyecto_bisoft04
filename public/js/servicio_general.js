@@ -197,3 +197,46 @@ const obtenerDatos = async (endpoint) => {
     });
   return listaDatos;
 };
+
+const uploadImage = async (endpoint, {isbn, cover}) => {
+  let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+  let token = localData.token;
+  let url = `/${endpoint}`;
+  let formData = new FormData();
+  console.log(url)
+  formData.append('cover', cover)
+  formData.append('isbn', isbn) 
+  await axios({
+    url: url,
+    method: "post",
+    responseType: "json",
+    data: formData,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": `multipart/form-data`,
+    },
+  })
+    .then((response) => {
+      console.log('gewd')
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+};
+
+// const getImage = async (endpoint, data) => {
+//   let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+//   let token = localData.token;
+//   let url = `/${endpoint}`;
+//   await axios({
+//     url: url,
+//     method: "get",
+//     responseType: "json",
+//     params: {
+//       isbn: data
+//     },
+//     headers: {
+//       Authorization: `Bearer ${token}`,
+//     },
+//   })
+// }

@@ -38,10 +38,10 @@ const formEl = document.querySelector("registrar-libro");
 const tbodyEl = document.querySelector("tbody");
 const tableEl = document.querySelector("table");
 
-async function populateBookTable(){
-    let bookData = await obtenerDatos('libros')
-    bookData.forEach((libro)=>{
-        tbodyEl.innerHTML += `
+async function populateBookTable() {
+  let bookData = await obtenerDatos("libros");
+  bookData.forEach(async (libro) => {
+    tbodyEl.innerHTML += `
         <tr>
             <td>${libro.isbn}</td>
             <td>${libro.name}</td>
@@ -52,12 +52,12 @@ async function populateBookTable(){
             <td>${libro.awards}</td>
             <td>${libro.price}</td>
             <td>${libro.discount}</td>
-            <td>${libro.cover}</td>
+            <td><img src="/libro/portada/${libro.isbn}"></img></td>
             <td>${libro.genere}</td>
             <td><button class="deleteBtn">Borrar</button></td>
         </tr>
     `;
-    })
+  });
 }
 
 function onAddWebsite() {
@@ -85,13 +85,13 @@ function onDeleteRow(e) {
   }
 
   const btn = e.target;
-  const locateTR = btn.closest("tr")
-  const isbnToDelete = locateTR.getElementsByTagName("td")[0].innerText
+  const locateTR = btn.closest("tr");
+  const isbnToDelete = locateTR.getElementsByTagName("td")[0].innerText;
   locateTR.remove();
   let data = {
-      "isbn": isbnToDelete
-  }
-  borrarLibro('libros', data)
+    isbn: isbnToDelete,
+  };
+  borrarLibro("libros", data);
 }
 
 let inputValidator = {
@@ -104,11 +104,10 @@ let inputValidator = {
   "txt-Premio": false,
   "txt-Precio": false,
   "txt-Descuento": false,
-  "txt-Imagen": false,
   "slt-Genero": false,
 };
 
-let formElements = document.querySelectorAll('#registrar-libro')
+let formElements = document.querySelectorAll("#registrar-libro");
 
 formElements.forEach((e) => {
   e.addEventListener("input", () => {
@@ -131,7 +130,7 @@ formElements.forEach((e) => {
 
 tableEl.addEventListener("click", onDeleteRow);
 
-function getData() {
+async function getData() {
   let data = {
     name: titulo.value,
     author: autor.value,
@@ -142,16 +141,22 @@ function getData() {
     awards: premio.value,
     price: precio.value,
     discount: descuento.value,
-    cover: portada.value,
     genere: genero.value,
   };
-  registrarLibro("libros", data);
+
+  let image = {
+    isbn: isbn.value,
+    cover: portada.value,
+  };
+
+  await registrarLibro("libros", data)
+  await uploadImage("libro/portada", image);
   document.getElementById("registrar-libro").reset();
 }
 
-registroBtn.addEventListener("click", ()=>{
-    onAddWebsite()
-    getData()
+registroBtn.addEventListener("click", () => {
+  onAddWebsite();
+  getData();
 });
 
-populateBookTable()
+populateBookTable();

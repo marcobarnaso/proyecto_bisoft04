@@ -130,6 +130,22 @@
     width: 150px;
 }
 
+.subir-portada {
+    background-color: rgb(238, 228, 228);
+    color: rgb(1, 7, 13);
+    height: 35px;
+    width: 150px;
+    font-weight: bold;
+}
+
+.subir-portada:hover {
+    background-color: rgb(226, 122, 43);
+    border: 2px solid brown;
+    cursor: pointer;
+    height: 35px;
+    width: 150px;
+}
+
 #sect-registro form button:disabled {
     border: 1px solid #D65A40;
     background: white;

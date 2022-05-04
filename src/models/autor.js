@@ -3,7 +3,7 @@ const mongoose = require ('mongoose')
 const autorSchema = new mongoose.Schema(
     {
         picture: {
-            type: String,
+            type: Buffer,
         },
         country: {
             type: String,
@@ -39,7 +39,7 @@ const autorSchema = new mongoose.Schema(
             type: String,
             trim: true,
             required: true
-        }
+        },
     }, {timestamps: true}
 )
 

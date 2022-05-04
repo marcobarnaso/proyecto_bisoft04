@@ -125,7 +125,6 @@ function getData() {
     awards: premios.value,
     review: resena.value,
   };
-  console.log(data)
   registrarAutor("autor", data);
   document.getElementById("registrar-autor").reset();
 }
