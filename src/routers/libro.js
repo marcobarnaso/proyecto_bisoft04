@@ -25,6 +25,15 @@ router.get("/libros", auth, async(req, res)=>{
     }
 })
 
+router.get("/libro/buscar/:isbn", auth, async(req, res)=>{
+  try {
+      const libro = await Libro.findOne({"isbn":req.params.isbn})
+      res.status(200).send(libro)
+  } catch (e) {
+      res.status(400).send(e)
+  }
+})
+
 router.delete("/libros", auth, async (req, res) => {
     try {
         const libro = await Libro.findOne({"isbn":req.body.isbn})
@@ -50,7 +59,7 @@ const upload = multer({
 
 router.post('/libro/portada', auth, upload.single('cover'), async (req, res) => {
   let libro = await Libro.findOne({"isbn":req.body.isbn})
-  const buffer = await sharp(req.file.buffer).resize({ width: 80, height: 127 }).png().toBuffer()
+  const buffer = await sharp(req.file.buffer).resize({ width: 160, height: 255 }).png().toBuffer()
   libro.cover = buffer
   await libro.save()
   res.send()
@@ -77,5 +86,6 @@ router.get('/libro/portada/:isbn', async (req, res) => {
       res.status(404).send()
   }
 })
+
 
 module.exports = router

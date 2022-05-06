@@ -4,6 +4,7 @@ const botonNext1 = document.querySelector(".next1");
 const botonPrevious1 = document.querySelector(".previous1");
 const container = document.querySelector(".container-horizontal-scroll");
 const container1 = document.querySelector(".container-horizontal-scroll1");
+const masVendido1 = document.querySelector("#mas-vendidos-1")
 
 function slide(direction, container) {
   scrollCompleted = 0;
@@ -55,20 +56,22 @@ botonPrevious1.addEventListener("click", () => {
   slide(slideLeft, container1);
 });
 
-function getLibroId() {
-  libroEncontrado = false;
-
-  let libro = document.querySelector(".book-container");
-  let libroId = libro.getAttribute("libroId");
-  listaLibros.forEach((libro) => {
-    if (libro.id == libroId) {
-      localStorage.setItem("libro", JSON.stringify(libro));
-      libroEncontrado = true;
-    }
-    if (libroEncontrado == true) {
-      window.location.href = "libro";
-    }
-  });
+async function getLibroId() {
+  let buscarIsbn = masVendido1.getAttribute('isbn')
+  let libro = await buscarLibro(`libro/buscar/${buscarIsbn}`)
+  console.log(libro)
+  localStorage.setItem("libro", JSON.stringify(libro));
+  window.location.href = "libro";
 }
 
-document.querySelector(".book-container").addEventListener("click", getLibroId);
+async function insertarMasVendidos(){
+  const libros = await masVendidos()
+  masVendido1.setAttribute('isbn', `${libros[0].isbn}`)
+  masVendido1.innerHTML=`
+  <img src="/libro/portada/${libros[0].isbn}" isbn="${libros[0].isbn}" alt="${libros[0].name}">
+  `
+}
+
+insertarMasVendidos()
+
+document.querySelector("#mas-vendidos-1").addEventListener("click", getLibroId);

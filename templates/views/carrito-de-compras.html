@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/resources/css/reset.css">
-    <link rel="stylesheet" href="/resources/css/carrito-de-compras.css">
-    <link rel="stylesheet" href="/resources/css/header.css">
-    <link rel="stylesheet" href="/resources/css/footer.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/carrito-de-compras.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
     <!--Esto es editable-->
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <title>Carrito de compras</title>
@@ -38,8 +38,8 @@
                     <img src="" id="portada-libro" alt="portada del libro agregado">
                 </div>
                 <div id="contenedor-info">
-                    <h2 id="nombre-libro">Nombre del libro</h2>
-                    <p id="nombre-autor">Nombre del autor</p>
+                    <h2 id="nombre-libro"></h2>
+                    <p id="nombre-autor"></p>
                     <div id="cantidad">
                         <label for="cantidad-libros" id="label-container">Cantidad</label>
                         <input type="number" id="cantidad-libros" value="1">
@@ -48,19 +48,19 @@
 
                     <div id="precio">
                         <p>Precio: </p>
-                        <pre id="precio-libro">0.0</pre>
+                        <pre id="precio-libro"></pre>
                     </div>
                     <div id="descuento">
                         <p>Descuento: </p>
-                        <p id="porcentaje-descuento">0%</p>
+                        <p id="porcentaje-descuento">%</p>
                     </div>
                 </div>
             </div>
 
             <div id="opcion-proceder-compra">
                 <p id="total">Total: </p>
-                <p id="suma-carrito-compras">0.0</p>
-                <button id="btn-compra">Proceder con el pago</button>
+                <p id="suma-carrito-compras"></p>
+                <button id="btn-compra" onclick="window.location='confirmar-compra'">Proceder con el pago</button>
             </div>
         </div>
 
@@ -74,9 +74,9 @@
     </footer>
 
     <!--Aqui se puede enlazar el codigo con Javascript-->
-    <script src="/resources/js/carrito-de-compras.js"></script>
-    <script src="/resources/js/header.js"></script>
-    <script src="/resources/js/footer.js"></script>
+    <script src="/js/carrito-de-compras.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 

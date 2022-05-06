@@ -31,7 +31,10 @@
         <section id="sect-registro">
             <form id="registrar-autor">
                 <h1>Administración de Autores</h1>
-
+                <div class="input-container">
+                    <label for="txt-id">ID Autor</label>
+                    <input type="text" id="txt-id">
+                </div>
                 <div class="input-container">
                     <label for="slt-pais">País</label>
                     <select id="slt-pais">
@@ -267,7 +270,7 @@
 
                     <div class="input-container">
                         <label for="txt-foto">Foto</label>
-                        <input type="text" id="txt-foto">
+                        <input type="file" id="txt-foto">
                     </div>
 
                     <div class="input-container">
@@ -321,6 +324,7 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>País</th>
                         <th>Foto</th>
                         <th>Nombre</th>

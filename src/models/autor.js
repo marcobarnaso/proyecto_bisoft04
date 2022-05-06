@@ -2,6 +2,12 @@ const mongoose = require ('mongoose')
 
 const autorSchema = new mongoose.Schema(
     {
+        authorId: {
+            type: Number,
+            required: true,
+            unique: true,
+            trim: true
+        },
         picture: {
             type: Buffer,
         },

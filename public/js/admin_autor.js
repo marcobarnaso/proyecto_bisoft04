@@ -5,6 +5,7 @@ const botonPrevious1 = document.querySelector(".previous1");
 const container = document.querySelector(".container-horizontal-scroll");
 const container1 = document.querySelector(".container-horizontal-scroll1");
 
+const autorId = document.querySelector("#txt-id")
 const pais = document.querySelector("#slt-pais");
 const foto = document.querySelector("#txt-foto");
 const nombre = document.querySelector("#txt-nombre");
@@ -41,8 +42,9 @@ async function populateAuthorTable() {
   authorData.forEach((author) => {
     tbodyEl.innerHTML += `
     <tr>
+        <td>${author.authorId}</td>
         <td>${author.country}</td>
-        <td>${author.picture}</td>
+        <td><img src="/autor/foto/${author.authorId}"></td>
         <td>${author.name}</td>
         <td>${author.birthDate}</td>
         <td>${author.deceased}</td>
@@ -58,6 +60,7 @@ async function populateAuthorTable() {
 function onAddWebsite() {
   tbodyEl.innerHTML += `
     <tr>
+        <td>${autorId.value}</td>
         <td>${pais.value}</td>
         <td>${foto.value}</td>
         <td>${nombre.value}</td>
@@ -77,7 +80,13 @@ function onDeleteRow(e) {
   }
 
   const btn = e.target;
-  btn.closest("tr").remove();
+  const locateTR = btn.closest("tr");
+  const idToDelete = locateTR.getElementsByTagName("td")[0].innerText;
+  locateTR.remove();
+  let data = {
+    idAutor: idToDelete
+  }
+  borrarAutor('autor', data)
 }
 
 tableEl.addEventListener("click", onDeleteRow);
@@ -114,9 +123,9 @@ let inputValidator = {
     });
   });
 
-function getData() {
+async function getData() {
   let data = {
-    picture: foto.value,
+    authorId: autorId.value,
     country: pais.value,
     name: nombre.value,
     birthDate: nacimiento.value,
@@ -125,7 +134,13 @@ function getData() {
     awards: premios.value,
     review: resena.value,
   };
-  registrarAutor("autor", data);
+
+  let image = {
+    picture: foto.files[0],
+    authorId: autorId.value,
+  }
+  await registrarAutor("autor", data);
+  await uploadAuthorPic('autor/foto', image)
   document.getElementById("registrar-autor").reset();
 }
 

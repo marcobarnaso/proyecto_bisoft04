@@ -55,6 +55,9 @@ const libroSchema = new mongoose.Schema(
       trim: true,
       required: true,
     },
+    sold: {
+      type: Number
+    }
   },
   { timestamps: true }
 );

@@ -81,9 +81,9 @@
 
 
         <div class="contenedor" id="contenedor1">
-            <h2>Una tierra prometida</h2>
+            <h2 class="nombre-libro"></h2>
             <p id="resaltar">-Descripción del libro:</p>
-            <p id="info-libro">Un relato cautivador y personal de la historia según se va forjando, del presidente que nos ha inspirado a creer en el poder de la democracia.</p>
+            <p class="resena" id="info-libro"></p>
             <div id="lapices">
                 <div class="valoracion">
 
@@ -115,20 +115,20 @@
                 </div>
             </div>
             <p id="resaltar">-Autor:</p>
-            <p id="info-libro">Barack Obama</p>
+            <p class="nombre-autor" id="info-libro"></p>
             <p id="resaltar">-ISBN:</p>
-            <p id="info-libro">123</p>
-            <p id="resaltar">-Editorial:</p>
-            <p id="info-libro">Penguin Random House Grupo Editorial España, 2020</p>
+            <p class="isbn"id="info-libro"></p>
+            <p id="resaltar">Editorial:</p>
+            <p class="editorial" id="info-libro"></p>
             <p id="resaltar">-Fecha de publicación:</p>
-            <p id="info-libro">2020</p>
+            <p class="publicacion" id="info-libro"></p>
         </div>
 
 
         <div class="contenedor" id="contenedor2">
             <h2>Detalle de la compra</h2>
-            <p>CRC 7900.00</p>
-            <button id="btn-agregar-carrito">Agregar al carrito</button>
+            <p class="precio">Precio: </p>
+            <button id="btn-agregar-carrito" onclick="window.location ='carrito'">Agregar al carrito</button>
             <button id="btn-comprar-ahora">Comprar ahora</button>
             <div id="info-cantidad">
                 <div class="label-container">
@@ -152,6 +152,7 @@
     <!--Aqui se puede enlazar el codigo con Javascript-->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="/js/servicio_general.js"></script>
+    <script src="/js/perfil_libro.js"></script>
     <script src="/js/header.js"></script>
     <script src="/js/footer.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -146,7 +146,7 @@ async function getData() {
 
   let image = {
     isbn: isbn.value,
-    cover: portada.value,
+    cover: portada.files[0],
   };
 
   await registrarLibro("libros", data)

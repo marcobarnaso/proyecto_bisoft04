@@ -173,6 +173,36 @@ const borrarLibro = async (endpoint, data) => {
       });
   };
 
+  const borrarAutor = async (endpoint, data) => {
+    let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+    let token = localData.token;
+  
+    let url = `/${endpoint}`;
+    await axios({
+      url: url,
+      method: "delete",
+      responseType: "json",
+      data: data,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        Swal.fire({
+          icon: "success",
+          title: `Autor Borrado`,
+          text: data.name,
+        });
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Ha ocurrido un error",
+          text: error,
+        });
+      });
+  };
+
 const obtenerDatos = async (endpoint) => {
   let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
   let token = localData.token;
@@ -203,7 +233,6 @@ const uploadImage = async (endpoint, {isbn, cover}) => {
   let token = localData.token;
   let url = `/${endpoint}`;
   let formData = new FormData();
-  console.log(url)
   formData.append('cover', cover)
   formData.append('isbn', isbn) 
   await axios({
@@ -224,19 +253,75 @@ const uploadImage = async (endpoint, {isbn, cover}) => {
     });
 };
 
-// const getImage = async (endpoint, data) => {
-//   let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
-//   let token = localData.token;
-//   let url = `/${endpoint}`;
-//   await axios({
-//     url: url,
-//     method: "get",
-//     responseType: "json",
-//     params: {
-//       isbn: data
-//     },
-//     headers: {
-//       Authorization: `Bearer ${token}`,
-//     },
-//   })
-// }
+const uploadAuthorPic = async (endpoint, {picture, authorId}) => {
+  let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+  let token = localData.token;
+  let url = `/${endpoint}`;
+  let formData = new FormData();
+  formData.append('picture', picture)
+  formData.append('authorId', authorId) 
+  await axios({
+    url: url,
+    method: "post",
+    responseType: "json",
+    data: formData,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": `multipart/form-data`,
+    },
+  })
+    .then((response) => {
+      console.log('gewd')
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+};
+
+const buscarLibro = async (endpoint) => {
+  let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+  let token = localData.token;
+  let url = `/${endpoint}`;
+  let listaDatos = [];
+  await axios({
+    url: url,
+    method: "get",
+    responseType: "json",
+    headers: {
+        Authorization: `Bearer ${token}`,
+      },
+  })
+    .then((response) => {
+      listaDatos = response.data;
+    })
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        text: error,
+      });
+    });
+  return listaDatos;
+};
+
+
+async function masVendidos(){
+  let localData = JSON.parse(localStorage.getItem("usuarioConectado"));
+  let token = localData.token;
+  let url = `/libros`;
+  let listaDatos = [];
+  await axios({
+    url: url,
+    method: "get",
+    responseType: "json",
+    headers: {
+        Authorization: `Bearer ${token}`,
+      },
+  })
+    .then((response) => {
+      listaDatos = response.data;
+    })
+    .catch((error) => {
+      console.log(error)
+    });
+  return listaDatos;
+};

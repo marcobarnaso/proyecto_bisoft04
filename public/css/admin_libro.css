@@ -207,3 +207,8 @@ tr {
     vertical-align: inherit;
     border-color: inherit;
 }
+
+img {
+    width: 80px;
+    height: 127px;
+}

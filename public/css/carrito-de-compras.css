@@ -162,7 +162,7 @@ h2 {
     font-weight: bolder;
 }
 
-button:hover {
+#btn-compra:hover {
     cursor: pointer;
     background-color: #d85205;
     color: white;
@@ -180,6 +180,12 @@ button:hover {
     margin-top: 30px;
 }
 
+#btn-eliminar:hover {
+    cursor: pointer;
+    background-color: #d85205;
+    color: white;
+}
+
 #precio {
     margin-top: 30px;
     display: flex;
@@ -192,4 +198,14 @@ button:hover {
 
 #suma-carrito-compras {
     margin-top: 30px;
+}
+
+button:disabled {
+    border: 1px solid #D65A40;
+    background: white;
+    color: grey;
+	-moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	-webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+	box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
+    cursor: pointer;
 }
