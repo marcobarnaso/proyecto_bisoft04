@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/catalogo-autores.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <title>Administracion de libros</title>
+
+    <style>
+        body {
+            background-color: rgb(241, 235, 229);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="head">
+    </section>
+
+    <section id="navigation">
+    </section>
+    <div class="container">
+        <section id="sect-registro">
+            
+        </section>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>País</th>
+                        <th>Foto</th>
+                        <th>Nombre</th>
+                        <th>Fecha nacimiento</th>
+                        <th>Fecha defunción</th>
+                        <th>Libros publicados</th>
+                        <th>Premios Literarios</th>
+                        <!-- <th>Año premio Nobel</th> -->
+                        <th>Reseña de vida</th>
+                        <!-- <th>Premios literarios</th> -->
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        // const formEl = document.querySelector("form");
+        // const tbodyEl = document.querySelector("tbody");
+        // const tableEl = document.querySelector("table");
+
+        // function onAddWebsite(e) {
+        //     e.preventDefault();
+        //     const pais = document.getElementById("slt-pais").value;
+        //     const foto = document.getElementById("txt-foto").value;
+        //     const nombre = document.getElementById("txt-nombre").value;
+        //     const fechaN = document.getElementById("txt-Fecha").value;
+        //     const fechaD = document.getElementById("txt-fechaDef").value;
+        //     const libros = document.getElementById("txt-Libros").value;
+        //     const premioN = document.getElementById("txt-nobel").value;
+        //     const premioNanno = document.getElementById("txt-nobelanno").value;
+        //     const resenna = document.getElementById("txt-resenna").value;
+        //     const premiosL = document.getElementById("slt-premiosL").value;
+        //     tbodyEl.innerHTML += `
+        //     <tr>
+        //         <td>${pais}</td>
+        //         <td>${foto}</td>
+        //         <td>${nombre}</td>
+        //         <td>${fechaN}</td>
+        //         <td>${fechaD}</td>
+        //         <td>${libros}</td>
+        //         <td>${premioN}</td>
+        //         <td>${premioNanno}</td>
+        //         <td>${resenna}</td>
+        //         <td>${premiosL}</td>
+        //         <td><button class="deleteBtn">Borrar</button></td>
+        //     </tr>
+        // `;
+        // }
+
+        // function onDeleteRow(e) {
+        //     if (!e.target.classList.contains("deleteBtn")) {
+        //         return;
+        //     }
+
+        //     const btn = e.target;
+        //     btn.closest("tr").remove();
+        // }
+
+        // formEl.addEventListener("submit", onAddWebsite);
+        // tableEl.addEventListener("click", onDeleteRow);
+    </script>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/servicio_general.js"></script>
+    <script src="/js/catalogo-autores.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -92,6 +92,14 @@ app.get('/confirmar-compra', (req, res)=>{
   res.render('confirmar-compra')
 })
 
+app.get('/catalogo-libros', (req, res)=>{
+  res.render('catalogo-libros')
+})
+
+app.get('/catalogo-autores', (req, res)=>{
+  res.render('catalogo-autores')
+})
+
 app.listen(port, () => {
   console.log(`El Servidor local está arriba y andando en el puerto ${port}.`);
 });

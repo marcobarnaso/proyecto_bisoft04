@@ -18,14 +18,14 @@ customNav.innerHTML = `
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Catálogo</button>
 <div class="dropdown-menu">
-    <a href="/libro" class="link">Libros</a>
-    <a href="/autor" class="link">Autores</a>
+    <a href="/catalogo-libros" class="link">Libros</a>
+    <a href="/catalogo-autores" class="link">Autores</a>
 </div>
 </div>
 <div class="dropdown" data-dropdown>
 <button class="link" data-dropdown-button>Búsqueda</button>
 <div class="dropdown-menu">
-    <a href="#" class="link">Libros</a>
+    <a href="/catalogo-libros" class="link">Libros</a>
     <a href="#" class="link">Autores</a>
 </div>
 </div>
