@@ -97,7 +97,6 @@ const login = async (endpoint, data, redireccion) => {
       Swal.fire({
         icon: "success",
         title: `Bienvenid@ de vuelta ${res.data.user.name}`,
-        text: "lorem ipsum",
       }).then(() => {
         window.location.href = redireccion;
       });
