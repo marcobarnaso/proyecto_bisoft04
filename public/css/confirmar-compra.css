@@ -198,7 +198,7 @@ h2 {
     cursor: pointer;
 }
 
-button:hover {
+#btn-pagar:hover {
     background-color: #d85205;
     color: white;
 }
