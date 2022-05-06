@@ -48,8 +48,8 @@ async function populateBookTable() {
             <td>${libro.author}</td>
             <td>${libro.editorial}</td>
             <td>${libro.published}</td>
-            <td>${libro.awards}</td>
             <td>${libro.excerpt}</td>
+            <td>${libro.awards}</td>
             <td>${libro.price}</td>
             <td>${libro.discount}</td>
             <td><img src="/libro/portada/${libro.isbn}"></img></td>

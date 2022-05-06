@@ -16,7 +16,7 @@ router.post("/libros", auth, async (req, res) => {
   }
 });
 
-router.get("/libros", auth, async(req, res)=>{
+router.get("/libros", async(req, res)=>{
     try {
         const libros = await Libro.find({})
         res.status(200).send(libros)
@@ -25,7 +25,7 @@ router.get("/libros", auth, async(req, res)=>{
     }
 })
 
-router.get("/libro/buscar/:isbn", auth, async(req, res)=>{
+router.get("/libro/buscar/:isbn", async(req, res)=>{
   try {
       const libro = await Libro.findOne({"isbn":req.params.isbn})
       res.status(200).send(libro)
